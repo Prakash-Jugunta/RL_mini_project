@@ -1,0 +1,5 @@
+workflow,episodes,success_rate,mean_return,mean_decisions,mean_decision_overhead,wrong_action_rate,execution_failure_rate
+LOGIN,25,100.0,8.8,4.0,0.0,0.0,0.0
+SEARCH,25,100.0,7.85,3.0,0.0,0.0,0.0
+PROFILE,25,100.0,8.8,4.0,0.0,0.0,0.0
+CHECKOUT,25,100.0,9.75,5.0,0.0,0.0,0.0

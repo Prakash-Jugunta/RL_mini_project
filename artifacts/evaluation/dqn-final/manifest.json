@@ -1,0 +1,42 @@
+{
+  "evaluation_version": "phase14-dqn-eval-v1",
+  "timestamp": "2026-10-03T12:19:04.428393",
+  "checkpoint": {
+    "path": "artifacts/dqn/phase13-v1/latest_checkpoint.pt",
+    "sha256": "1ad8de13df71acb5f9ca1f3bfea25b050c1f0bbc901f56235af1ba60e3c01753",
+    "training_episode": 15000,
+    "global_step": 68459
+  },
+  "protocol": {
+    "split_version": "phase12-v1",
+    "split_seed": 1201,
+    "curriculum_version": "phase13-v1",
+    "training_seed": 42,
+    "evaluation_policy": "GREEDY",
+    "epsilon": 0.0,
+    "reward_version": "phase8-v1",
+    "state_encoding_version": "phase6-public-prev-candidate-v2",
+    "base_url": "http://localhost:3000",
+    "browser_adapter": "PlaywrightBrowserAdapter"
+  },
+  "counts": {
+    "validation": 0,
+    "test_id": 0,
+    "test_l6": 100
+  },
+  "workflows": [
+    "LOGIN",
+    "SEARCH",
+    "PROFILE",
+    "CHECKOUT"
+  ],
+  "mutation_levels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

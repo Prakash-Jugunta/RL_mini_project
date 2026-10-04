@@ -1,0 +1,30 @@
+{
+  "name": "rl-ui-self-healing-demo",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:e2e": "playwright test tests/playwright/login.spec.js tests/playwright/search.spec.js tests/playwright/profile.spec.js tests/playwright/checkout.spec.js",
+    "test:e2e:headed": "playwright test tests/playwright/login.spec.js tests/playwright/search.spec.js tests/playwright/profile.spec.js tests/playwright/checkout.spec.js --headed",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:report": "playwright show-report",
+    "test:e2e:activation": "playwright test tests/playwright/mutation-activation.spec.js --reporter=list",
+    "test:e2e:mutation": "node scripts/run-degradation-eval.js",
+    "test:unit:mutation": "node tests/mutations/engine.test.js"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.3"
+  }
+}

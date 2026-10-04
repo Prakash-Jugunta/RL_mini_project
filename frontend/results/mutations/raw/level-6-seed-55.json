@@ -1,0 +1,547 @@
+{
+  "config": {
+    "argv": [
+      "C:\\nvm4w\\nodejs\\node.exe",
+      "E:\\sem7\\RL\\RL_replay\\frontend\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/playwright/login.spec.js",
+      "tests/playwright/search.spec.js",
+      "tests/playwright/profile.spec.js",
+      "tests/playwright/checkout.spec.js",
+      "--reporter=json"
+    ],
+    "configFile": "E:\\sem7\\RL\\RL_replay\\frontend\\playwright.config.js",
+    "rootDir": "E:/sem7/RL/RL_replay/frontend/tests/playwright",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "E:/sem7/RL/RL_replay/frontend/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "E:/sem7/RL/RL_replay/frontend/tests/playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "checkout.spec.js",
+      "file": "checkout.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Workflow 4 — Checkout & Cart Baseline Tests",
+          "file": "checkout.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Complete End-to-End Checkout Workflow",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 12169,
+                      "error": {
+                        "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#add-to-cart-btn')\u001b[22m\n",
+                        "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#add-to-cart-btn')\u001b[22m\n\n    at E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\checkout.spec.js:9:44",
+                        "location": {
+                          "file": "E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\checkout.spec.js",
+                          "column": 44,
+                          "line": 9
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  7 |\u001b[39m\n \u001b[90m  8 |\u001b[39m     \u001b[90m// 2. Add product to cart\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#add-to-cart-btn'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m\n \u001b[90m 11 |\u001b[39m     \u001b[90m// 3. Navigate to cart using navbar cart button\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#cart-btn'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\checkout.spec.js",
+                            "column": 44,
+                            "line": 9
+                          },
+                          "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#add-to-cart-btn')\u001b[22m\n\n\n   7 |\n   8 |     // 2. Add product to cart\n>  9 |     await page.locator('#add-to-cart-btn').click();\n     |                                            ^\n  10 |\n  11 |     // 3. Navigate to cart using navbar cart button\n  12 |     await page.locator('#cart-btn').click();\n    at E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\checkout.spec.js:9:44"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-30T13:56:09.345Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "E:\\sem7\\RL\\RL_replay\\frontend\\test-results\\checkout-Workflow-4-—-Chec-a028d-nd-to-End-Checkout-Workflow-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "E:\\sem7\\RL\\RL_replay\\frontend\\test-results\\checkout-Workflow-4-—-Chec-a028d-nd-to-End-Checkout-Workflow-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "E:\\sem7\\RL\\RL_replay\\frontend\\test-results\\checkout-Workflow-4-—-Chec-a028d-nd-to-End-Checkout-Workflow-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\checkout.spec.js",
+                        "column": 44,
+                        "line": 9
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "24e4b3ac21f7f473b7e5-af40bf2a4f5d90d9cfba",
+              "file": "checkout.spec.js",
+              "line": 4,
+              "column": 3
+            },
+            {
+              "title": "Empty Cart Protection — Direct Access Redirects to Cart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 797,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-30T13:56:22.880Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "24e4b3ac21f7f473b7e5-d10037326d5e0a9db43b",
+              "file": "checkout.spec.js",
+              "line": 27,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "login.spec.js",
+      "file": "login.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Workflow 1 — Login Baseline Tests",
+          "file": "login.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Successful Login Workflow with Valid Credentials",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 12055,
+                      "error": {
+                        "message": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n",
+                        "stack": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n\n    at E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\login.spec.js:9:37",
+                        "location": {
+                          "file": "E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\login.spec.js",
+                          "column": 37,
+                          "line": 9
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  7 |\u001b[39m\n \u001b[90m  8 |\u001b[39m     \u001b[90m// 2. Use exact brittle Phase 1 selectors\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#username'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'testuser'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'password123'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#login-btn'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\login.spec.js",
+                            "column": 37,
+                            "line": 9
+                          },
+                          "message": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n\n\n   7 |\n   8 |     // 2. Use exact brittle Phase 1 selectors\n>  9 |     await page.locator('#username').fill('testuser');\n     |                                     ^\n  10 |     await page.locator('#password').fill('password123');\n  11 |     await page.locator('#login-btn').click();\n  12 |\n    at E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\login.spec.js:9:37"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-30T13:56:23.897Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "E:\\sem7\\RL\\RL_replay\\frontend\\test-results\\login-Workflow-1-—-Login-B-c6dae-flow-with-Valid-Credentials-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "E:\\sem7\\RL\\RL_replay\\frontend\\test-results\\login-Workflow-1-—-Login-B-c6dae-flow-with-Valid-Credentials-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "E:\\sem7\\RL\\RL_replay\\frontend\\test-results\\login-Workflow-1-—-Login-B-c6dae-flow-with-Valid-Credentials-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\login.spec.js",
+                        "column": 37,
+                        "line": 9
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "badc1754af1944f68b2b-6786ed41502e7837a548",
+              "file": "login.spec.js",
+              "line": 4,
+              "column": 3
+            },
+            {
+              "title": "Negative Test — Invalid Credentials",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 12133,
+                      "error": {
+                        "message": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n",
+                        "stack": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n\n    at E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\login.spec.js:21:37",
+                        "location": {
+                          "file": "E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\login.spec.js",
+                          "column": 37,
+                          "line": 21
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 20 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#username'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'invaliduser'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#password'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'wrongpassword'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#login-btn'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\login.spec.js",
+                            "column": 37,
+                            "line": 21
+                          },
+                          "message": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n\n\n  19 |     await page.goto('/login');\n  20 |\n> 21 |     await page.locator('#username').fill('invaliduser');\n     |                                     ^\n  22 |     await page.locator('#password').fill('wrongpassword');\n  23 |     await page.locator('#login-btn').click();\n  24 |\n    at E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\login.spec.js:21:37"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-30T13:56:37.095Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "E:\\sem7\\RL\\RL_replay\\frontend\\test-results\\login-Workflow-1-—-Login-B-8db4a--Test-—-Invalid-Credentials-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "E:\\sem7\\RL\\RL_replay\\frontend\\test-results\\login-Workflow-1-—-Login-B-8db4a--Test-—-Invalid-Credentials-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "E:\\sem7\\RL\\RL_replay\\frontend\\test-results\\login-Workflow-1-—-Login-B-8db4a--Test-—-Invalid-Credentials-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\login.spec.js",
+                        "column": 37,
+                        "line": 21
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "badc1754af1944f68b2b-584afebdcce1b6b9c2ea",
+              "file": "login.spec.js",
+              "line": 18,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "profile.spec.js",
+      "file": "profile.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Workflow 3 — Profile Update Baseline Tests",
+          "file": "profile.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Update Profile Details Workflow",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 12180,
+                      "error": {
+                        "message": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#profile-name')\u001b[22m\n",
+                        "stack": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#profile-name')\u001b[22m\n\n    at E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\profile.spec.js:9:41",
+                        "location": {
+                          "file": "E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\profile.spec.js",
+                          "column": 41,
+                          "line": 9
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  7 |\u001b[39m\n \u001b[90m  8 |\u001b[39m     \u001b[90m// 2. Fill inputs using exact Phase 1 selectors\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#profile-name'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'Test User'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#profile-email'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'test@example.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#save-profile-btn'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\profile.spec.js",
+                            "column": 41,
+                            "line": 9
+                          },
+                          "message": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#profile-name')\u001b[22m\n\n\n   7 |\n   8 |     // 2. Fill inputs using exact Phase 1 selectors\n>  9 |     await page.locator('#profile-name').fill('Test User');\n     |                                         ^\n  10 |     await page.locator('#profile-email').fill('test@example.com');\n  11 |     await page.locator('#save-profile-btn').click();\n  12 |\n    at E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\profile.spec.js:9:41"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-30T13:56:50.722Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "E:\\sem7\\RL\\RL_replay\\frontend\\test-results\\profile-Workflow-3-—-Profi-494ef-te-Profile-Details-Workflow-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "E:\\sem7\\RL\\RL_replay\\frontend\\test-results\\profile-Workflow-3-—-Profi-494ef-te-Profile-Details-Workflow-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "E:\\sem7\\RL\\RL_replay\\frontend\\test-results\\profile-Workflow-3-—-Profi-494ef-te-Profile-Details-Workflow-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\profile.spec.js",
+                        "column": 41,
+                        "line": 9
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d3b94327e94fcbd90a1b-9f7cf453ddf426057e6f",
+              "file": "profile.spec.js",
+              "line": 4,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "search.spec.js",
+      "file": "search.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Workflow 2 — Product Search Baseline Tests",
+          "file": "search.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Search and Select Product Workflow",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 11078,
+                      "error": {
+                        "message": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n",
+                        "stack": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n\n    at E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\search.spec.js:9:41",
+                        "location": {
+                          "file": "E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\search.spec.js",
+                          "column": 41,
+                          "line": 9
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  7 |\u001b[39m\n \u001b[90m  8 |\u001b[39m     \u001b[90m// 2. Use exact brittle Phase 1 selectors\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#search-input'\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'Wireless Mouse'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'#search-btn'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[90m// 3. Click the specific product result link\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\search.spec.js",
+                            "column": 41,
+                            "line": 9
+                          },
+                          "message": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n\n\n   7 |\n   8 |     // 2. Use exact brittle Phase 1 selectors\n>  9 |     await page.locator('#search-input').fill('Wireless Mouse');\n     |                                         ^\n  10 |     await page.locator('#search-btn').click();\n  11 |\n  12 |     // 3. Click the specific product result link\n    at E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\search.spec.js:9:41"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-30T13:57:04.047Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "E:\\sem7\\RL\\RL_replay\\frontend\\test-results\\search-Workflow-2-—-Produc-7f4e0-and-Select-Product-Workflow-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "E:\\sem7\\RL\\RL_replay\\frontend\\test-results\\search-Workflow-2-—-Produc-7f4e0-and-Select-Product-Workflow-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "E:\\sem7\\RL\\RL_replay\\frontend\\test-results\\search-Workflow-2-—-Produc-7f4e0-and-Select-Product-Workflow-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "E:\\sem7\\RL\\RL_replay\\frontend\\tests\\playwright\\search.spec.js",
+                        "column": 41,
+                        "line": 9
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9e6ea2b6d72fedbaa223-0af25f23617b6f9584d6",
+              "file": "search.spec.js",
+              "line": 4,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-30T13:56:08.394Z",
+    "duration": 66968.86300000001,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 5,
+    "flaky": 0
+  }
+}

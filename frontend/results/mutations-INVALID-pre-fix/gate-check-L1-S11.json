@@ -1,0 +1,35 @@
+{
+  "level": 1,
+  "seed": 11,
+  "preset": "Level 1 — ID+Class",
+  "activeMutations": [
+    "id",
+    "class"
+  ],
+  "status": "DEGRADED",
+  "passedCount": 1,
+  "failedCount": 1,
+  "totalTests": 2,
+  "tests": [
+    {
+      "title": "Successful Login Workflow with Valid Credentials",
+      "workflow": "login.spec.js > Workflow 1 — Login Baseline Tests",
+      "file": "login.spec.js",
+      "status": "FAIL",
+      "failureType": "SELECTOR_NOT_FOUND",
+      "selector": "#username",
+      "errorSnippet": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n\n\n   7 |\n   8 |     // 2. Use exact brittle Phase 1 selectors\n>  9 |     await page.locator('#username').fill('testuser');\n     |                                     ^\n  10 |     await page.",
+      "duration": 11399
+    },
+    {
+      "title": "Negative Test — Invalid Credentials",
+      "workflow": "login.spec.js > Workflow 1 — Login Baseline Tests",
+      "file": "login.spec.js",
+      "status": "PASS",
+      "failureType": "NONE",
+      "selector": null,
+      "errorSnippet": null,
+      "duration": 1105
+    }
+  ]
+}

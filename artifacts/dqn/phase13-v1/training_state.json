@@ -1,0 +1,11 @@
+{
+  "global_episode_id": 15000,
+  "total_episodes_budget": 15000,
+  "stage_index": 5,
+  "total_steps": 68459,
+  "learning_steps": 68360,
+  "replay_size": 10000,
+  "epsilon": 0.05,
+  "curriculum_version": "phase13-v1",
+  "split_version": "phase12-v1"
+}

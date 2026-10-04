@@ -1,0 +1,504 @@
+{
+  "phase": "Phase 3 — Baseline Degradation Evaluation",
+  "generatedAt": "2026-09-30T13:07:48.199Z",
+  "injectionMechanism": "window globals via /api/set-mutation + transformIndexHtml",
+  "expectedTestCount": 210,
+  "actualTestCount": 210,
+  "evaluatedSeeds": [
+    11,
+    22,
+    33,
+    44,
+    55
+  ],
+  "evaluatedLevels": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "failureClassifications": {
+    "SELECTOR_NOT_FOUND": 42,
+    "TIMEOUT": 0,
+    "ASSERTION_FAILURE": 0,
+    "NAVIGATION_FAILURE": 10,
+    "APPLICATION_FAILURE": 0,
+    "UNKNOWN": 0
+  },
+  "levels": [
+    {
+      "level": 0,
+      "isHeldOut": false,
+      "testsRun": 30,
+      "passed": 29,
+      "failed": 1,
+      "passRate": "96.7%",
+      "seeds": [
+        {
+          "seed": 11,
+          "preset": "Level 0 — Original",
+          "activeMutations": [],
+          "status": "PASS",
+          "passedCount": 6,
+          "failedCount": 0,
+          "totalTests": 6
+        },
+        {
+          "seed": 22,
+          "preset": "Level 0 — Original",
+          "activeMutations": [],
+          "status": "PASS",
+          "passedCount": 6,
+          "failedCount": 0,
+          "totalTests": 6
+        },
+        {
+          "seed": 33,
+          "preset": "Level 0 — Original",
+          "activeMutations": [],
+          "status": "PASS",
+          "passedCount": 6,
+          "failedCount": 0,
+          "totalTests": 6
+        },
+        {
+          "seed": 44,
+          "preset": "Level 0 — Original",
+          "activeMutations": [],
+          "status": "DEGRADED",
+          "passedCount": 5,
+          "failedCount": 1,
+          "totalTests": 6
+        },
+        {
+          "seed": 55,
+          "preset": "Level 0 — Original",
+          "activeMutations": [],
+          "status": "PASS",
+          "passedCount": 6,
+          "failedCount": 0,
+          "totalTests": 6
+        }
+      ]
+    },
+    {
+      "level": 1,
+      "isHeldOut": false,
+      "testsRun": 30,
+      "passed": 9,
+      "failed": 21,
+      "passRate": "30.0%",
+      "seeds": [
+        {
+          "seed": 11,
+          "preset": "Level 1 — ID+Class",
+          "activeMutations": [
+            "id",
+            "class"
+          ],
+          "status": "DEGRADED",
+          "passedCount": 1,
+          "failedCount": 5,
+          "totalTests": 6
+        },
+        {
+          "seed": 22,
+          "preset": "Level 1 — ID+Class",
+          "activeMutations": [
+            "id",
+            "class"
+          ],
+          "status": "DEGRADED",
+          "passedCount": 5,
+          "failedCount": 1,
+          "totalTests": 6
+        },
+        {
+          "seed": 33,
+          "preset": "Level 1 — ID+Class",
+          "activeMutations": [
+            "id",
+            "class"
+          ],
+          "status": "DEGRADED",
+          "passedCount": 1,
+          "failedCount": 5,
+          "totalTests": 6
+        },
+        {
+          "seed": 44,
+          "preset": "Level 1 — ID+Class",
+          "activeMutations": [
+            "id",
+            "class"
+          ],
+          "status": "DEGRADED",
+          "passedCount": 1,
+          "failedCount": 5,
+          "totalTests": 6
+        },
+        {
+          "seed": 55,
+          "preset": "Level 1 — ID+Class",
+          "activeMutations": [
+            "id",
+            "class"
+          ],
+          "status": "DEGRADED",
+          "passedCount": 1,
+          "failedCount": 5,
+          "totalTests": 6
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "isHeldOut": false,
+      "testsRun": 30,
+      "passed": 30,
+      "failed": 0,
+      "passRate": "100.0%",
+      "seeds": [
+        {
+          "seed": 11,
+          "preset": "Level 2 — Text",
+          "activeMutations": [
+            "text"
+          ],
+          "status": "PASS",
+          "passedCount": 6,
+          "failedCount": 0,
+          "totalTests": 6
+        },
+        {
+          "seed": 22,
+          "preset": "Level 2 — Text",
+          "activeMutations": [
+            "text"
+          ],
+          "status": "PASS",
+          "passedCount": 6,
+          "failedCount": 0,
+          "totalTests": 6
+        },
+        {
+          "seed": 33,
+          "preset": "Level 2 — Text",
+          "activeMutations": [
+            "text"
+          ],
+          "status": "PASS",
+          "passedCount": 6,
+          "failedCount": 0,
+          "totalTests": 6
+        },
+        {
+          "seed": 44,
+          "preset": "Level 2 — Text",
+          "activeMutations": [
+            "text"
+          ],
+          "status": "PASS",
+          "passedCount": 6,
+          "failedCount": 0,
+          "totalTests": 6
+        },
+        {
+          "seed": 55,
+          "preset": "Level 2 — Text",
+          "activeMutations": [
+            "text"
+          ],
+          "status": "PASS",
+          "passedCount": 6,
+          "failedCount": 0,
+          "totalTests": 6
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "isHeldOut": false,
+      "testsRun": 30,
+      "passed": 30,
+      "failed": 0,
+      "passRate": "100.0%",
+      "seeds": [
+        {
+          "seed": 11,
+          "preset": "Level 3 — Structural",
+          "activeMutations": [
+            "position",
+            "dom"
+          ],
+          "status": "PASS",
+          "passedCount": 6,
+          "failedCount": 0,
+          "totalTests": 6
+        },
+        {
+          "seed": 22,
+          "preset": "Level 3 — Structural",
+          "activeMutations": [
+            "position",
+            "dom"
+          ],
+          "status": "PASS",
+          "passedCount": 6,
+          "failedCount": 0,
+          "totalTests": 6
+        },
+        {
+          "seed": 33,
+          "preset": "Level 3 — Structural",
+          "activeMutations": [
+            "position",
+            "dom"
+          ],
+          "status": "PASS",
+          "passedCount": 6,
+          "failedCount": 0,
+          "totalTests": 6
+        },
+        {
+          "seed": 44,
+          "preset": "Level 3 — Structural",
+          "activeMutations": [
+            "position",
+            "dom"
+          ],
+          "status": "PASS",
+          "passedCount": 6,
+          "failedCount": 0,
+          "totalTests": 6
+        },
+        {
+          "seed": 55,
+          "preset": "Level 3 — Structural",
+          "activeMutations": [
+            "position",
+            "dom"
+          ],
+          "status": "PASS",
+          "passedCount": 6,
+          "failedCount": 0,
+          "totalTests": 6
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "isHeldOut": false,
+      "testsRun": 30,
+      "passed": 30,
+      "failed": 0,
+      "passRate": "100.0%",
+      "seeds": [
+        {
+          "seed": 11,
+          "preset": "Level 4 — Distractor",
+          "activeMutations": [
+            "distractor"
+          ],
+          "status": "PASS",
+          "passedCount": 6,
+          "failedCount": 0,
+          "totalTests": 6
+        },
+        {
+          "seed": 22,
+          "preset": "Level 4 — Distractor",
+          "activeMutations": [
+            "distractor"
+          ],
+          "status": "PASS",
+          "passedCount": 6,
+          "failedCount": 0,
+          "totalTests": 6
+        },
+        {
+          "seed": 33,
+          "preset": "Level 4 — Distractor",
+          "activeMutations": [
+            "distractor"
+          ],
+          "status": "PASS",
+          "passedCount": 6,
+          "failedCount": 0,
+          "totalTests": 6
+        },
+        {
+          "seed": 44,
+          "preset": "Level 4 — Distractor",
+          "activeMutations": [
+            "distractor"
+          ],
+          "status": "PASS",
+          "passedCount": 6,
+          "failedCount": 0,
+          "totalTests": 6
+        },
+        {
+          "seed": 55,
+          "preset": "Level 4 — Distractor",
+          "activeMutations": [
+            "distractor"
+          ],
+          "status": "PASS",
+          "passedCount": 6,
+          "failedCount": 0,
+          "totalTests": 6
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "isHeldOut": false,
+      "testsRun": 30,
+      "passed": 15,
+      "failed": 15,
+      "passRate": "50.0%",
+      "seeds": [
+        {
+          "seed": 11,
+          "preset": "id+text",
+          "activeMutations": [
+            "id",
+            "text"
+          ],
+          "status": "DEGRADED",
+          "passedCount": 1,
+          "failedCount": 5,
+          "totalTests": 6
+        },
+        {
+          "seed": 22,
+          "preset": "text+position",
+          "activeMutations": [
+            "text",
+            "position"
+          ],
+          "status": "PASS",
+          "passedCount": 6,
+          "failedCount": 0,
+          "totalTests": 6
+        },
+        {
+          "seed": 33,
+          "preset": "id+dom",
+          "activeMutations": [
+            "id",
+            "dom"
+          ],
+          "status": "DEGRADED",
+          "passedCount": 1,
+          "failedCount": 5,
+          "totalTests": 6
+        },
+        {
+          "seed": 44,
+          "preset": "text+distractor",
+          "activeMutations": [
+            "text",
+            "distractor"
+          ],
+          "status": "PASS",
+          "passedCount": 6,
+          "failedCount": 0,
+          "totalTests": 6
+        },
+        {
+          "seed": 55,
+          "preset": "id+position",
+          "activeMutations": [
+            "id",
+            "position"
+          ],
+          "status": "DEGRADED",
+          "passedCount": 1,
+          "failedCount": 5,
+          "totalTests": 6
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "isHeldOut": true,
+      "testsRun": 30,
+      "passed": 15,
+      "failed": 15,
+      "passRate": "50.0%",
+      "seeds": [
+        {
+          "seed": 11,
+          "preset": "id+dom+distractor",
+          "activeMutations": [
+            "id",
+            "dom",
+            "distractor"
+          ],
+          "status": "DEGRADED",
+          "passedCount": 1,
+          "failedCount": 5,
+          "totalTests": 6
+        },
+        {
+          "seed": 22,
+          "preset": "text+type+position",
+          "activeMutations": [
+            "text",
+            "type",
+            "position"
+          ],
+          "status": "PASS",
+          "passedCount": 6,
+          "failedCount": 0,
+          "totalTests": 6
+        },
+        {
+          "seed": 33,
+          "preset": "id+text+dom",
+          "activeMutations": [
+            "id",
+            "text",
+            "dom"
+          ],
+          "status": "DEGRADED",
+          "passedCount": 1,
+          "failedCount": 5,
+          "totalTests": 6
+        },
+        {
+          "seed": 44,
+          "preset": "position+dom+distractor",
+          "activeMutations": [
+            "position",
+            "dom",
+            "distractor"
+          ],
+          "status": "PASS",
+          "passedCount": 6,
+          "failedCount": 0,
+          "totalTests": 6
+        },
+        {
+          "seed": 55,
+          "preset": "id+text+dom+distractor",
+          "activeMutations": [
+            "id",
+            "text",
+            "dom",
+            "distractor"
+          ],
+          "status": "DEGRADED",
+          "passedCount": 1,
+          "failedCount": 5,
+          "totalTests": 6
+        }
+      ]
+    }
+  ]
+}

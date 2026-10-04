@@ -1,0 +1,51 @@
+{
+  "level": 0,
+  "seed": 42,
+  "preset": "Activation Verification",
+  "status": "PASS",
+  "passedCount": 4,
+  "failedCount": 0,
+  "totalTests": 4,
+  "tests": [
+    {
+      "title": "Server /api/set-mutation endpoint is reachable and updates state",
+      "workflow": "mutation-activation.spec.js > Mutation Activation Verification",
+      "file": "mutation-activation.spec.js",
+      "status": "PASS",
+      "failureType": "NONE",
+      "selector": null,
+      "errorSnippet": null,
+      "duration": 54
+    },
+    {
+      "title": "Level 0 — browser receives level=0 and original IDs are intact",
+      "workflow": "mutation-activation.spec.js > Mutation Activation Verification",
+      "file": "mutation-activation.spec.js",
+      "status": "PASS",
+      "failureType": "NONE",
+      "selector": null,
+      "errorSnippet": null,
+      "duration": 1940
+    },
+    {
+      "title": "Level 1 Seed 11 — browser receives level=1, original IDs gone, mutated IDs present",
+      "workflow": "mutation-activation.spec.js > Mutation Activation Verification",
+      "file": "mutation-activation.spec.js",
+      "status": "PASS",
+      "failureType": "NONE",
+      "selector": null,
+      "errorSnippet": null,
+      "duration": 2718
+    },
+    {
+      "title": "Server config and browser globals are in sync after set-mutation",
+      "workflow": "mutation-activation.spec.js > Mutation Activation Verification",
+      "file": "mutation-activation.spec.js",
+      "status": "PASS",
+      "failureType": "NONE",
+      "selector": null,
+      "errorSnippet": null,
+      "duration": 2979
+    }
+  ]
+}

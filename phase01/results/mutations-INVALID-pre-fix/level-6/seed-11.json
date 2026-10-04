@@ -1,0 +1,77 @@
+{
+  "level": 6,
+  "seed": 11,
+  "preset": "id+dom+distractor",
+  "activeMutations": [
+    "id",
+    "dom",
+    "distractor"
+  ],
+  "isHeldOut": true,
+  "status": "DEGRADED",
+  "passedCount": 1,
+  "failedCount": 5,
+  "totalTests": 6,
+  "tests": [
+    {
+      "title": "Complete End-to-End Checkout Workflow",
+      "workflow": "checkout.spec.js > Workflow 4 — Checkout & Cart Baseline Tests",
+      "file": "checkout.spec.js",
+      "status": "FAIL",
+      "failureType": "SELECTOR_NOT_FOUND",
+      "selector": "#add-to-cart-btn",
+      "errorSnippet": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#add-to-cart-btn')\u001b[22m\n\n\n   7 |\n   8 |     // 2. Add product to cart\n>  9 |     await page.locator('#add-to-cart-btn').click();\n     |                                            ^\n  10 |\n  11 |     // 3. N",
+      "duration": 11294
+    },
+    {
+      "title": "Empty Cart Protection — Direct Access Redirects to Cart",
+      "workflow": "checkout.spec.js > Workflow 4 — Checkout & Cart Baseline Tests",
+      "file": "checkout.spec.js",
+      "status": "PASS",
+      "failureType": "NONE",
+      "selector": null,
+      "errorSnippet": null,
+      "duration": 667
+    },
+    {
+      "title": "Successful Login Workflow with Valid Credentials",
+      "workflow": "login.spec.js > Workflow 1 — Login Baseline Tests",
+      "file": "login.spec.js",
+      "status": "FAIL",
+      "failureType": "SELECTOR_NOT_FOUND",
+      "selector": "#username",
+      "errorSnippet": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n\n\n   7 |\n   8 |     // 2. Use exact brittle Phase 1 selectors\n>  9 |     await page.locator('#username').fill('testuser');\n     |                                     ^\n  10 |     await page.",
+      "duration": 11174
+    },
+    {
+      "title": "Negative Test — Invalid Credentials",
+      "workflow": "login.spec.js > Workflow 1 — Login Baseline Tests",
+      "file": "login.spec.js",
+      "status": "FAIL",
+      "failureType": "NAVIGATION_FAILURE",
+      "selector": "#username",
+      "errorSnippet": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#username')\u001b[22m\n\n\n  19 |     await page.goto('/login');\n  20 |\n> 21 |     await page.locator('#username').fill('invaliduser');\n     |                                     ^\n  22 |     await page.locator('#pa",
+      "duration": 11406
+    },
+    {
+      "title": "Update Profile Details Workflow",
+      "workflow": "profile.spec.js > Workflow 3 — Profile Update Baseline Tests",
+      "file": "profile.spec.js",
+      "status": "FAIL",
+      "failureType": "SELECTOR_NOT_FOUND",
+      "selector": "#profile-name",
+      "errorSnippet": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#profile-name')\u001b[22m\n\n\n   7 |\n   8 |     // 2. Fill inputs using exact Phase 1 selectors\n>  9 |     await page.locator('#profile-name').fill('Test User');\n     |                                         ^\n  1",
+      "duration": 11344
+    },
+    {
+      "title": "Search and Select Product Workflow",
+      "workflow": "search.spec.js > Workflow 2 — Product Search Baseline Tests",
+      "file": "search.spec.js",
+      "status": "FAIL",
+      "failureType": "SELECTOR_NOT_FOUND",
+      "selector": "#search-input",
+      "errorSnippet": "TimeoutError: locator.fill: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#search-input')\u001b[22m\n\n\n   7 |\n   8 |     // 2. Use exact brittle Phase 1 selectors\n>  9 |     await page.locator('#search-input').fill('Wireless Mouse');\n     |                                         ^\n  10",
+      "duration": 11073
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "checkpoint_path": "artifacts/dqn/phase13-v1/latest_checkpoint.pt",
+  "sha256": "1ad8de13df71acb5f9ca1f3bfea25b050c1f0bbc901f56235af1ba60e3c01753",
+  "training_episode": 15000,
+  "global_step": 68459,
+  "curriculum_version": "phase13-v1",
+  "training_seed": 42,
+  "val_success_rate": null,
+  "val_mean_return": null,
+  "policy_version": "phase10-dqn-state-v2",
+  "state_encoding_version": "phase6-public-prev-candidate-v2"
+}

@@ -1,0 +1,273 @@
+{
+  "config": {
+    "argv": [
+      "C:\\nvm4w\\nodejs\\node.exe",
+      "E:\\sem7\\RL\\RL_replay\\frontend\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/playwright/mutation-activation.spec.js",
+      "--reporter=json"
+    ],
+    "configFile": "E:\\sem7\\RL\\RL_replay\\frontend\\playwright.config.js",
+    "rootDir": "E:/sem7/RL/RL_replay/frontend/tests/playwright",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "E:/sem7/RL/RL_replay/frontend/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "E:/sem7/RL/RL_replay/frontend/tests/playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "mutation-activation.spec.js",
+      "file": "mutation-activation.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Mutation Activation Verification",
+          "file": "mutation-activation.spec.js",
+          "line": 54,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Server /api/set-mutation endpoint is reachable and updates state",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 77,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-30T13:40:28.263Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "29563fc4f25704e7e225-5fc28db2a436e0b34e1d",
+              "file": "mutation-activation.spec.js",
+              "line": 60,
+              "column": 3
+            },
+            {
+              "title": "Level 0 — browser receives level=0 and original IDs are intact",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1034,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[ACTIVATION] Level 0 actual IDs:\n"
+                        },
+                        {
+                          "text": "  username-input  id = \"username\" (expected: \"username\")\n"
+                        },
+                        {
+                          "text": "  password-input  id = \"password\" (expected: \"password\")\n"
+                        },
+                        {
+                          "text": "  login-action    id = \"login-btn\"    (expected: \"login-btn\")\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-30T13:40:28.396Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "29563fc4f25704e7e225-6dc2d58f5e7cacd081a6",
+              "file": "mutation-activation.spec.js",
+              "line": 84,
+              "column": 3
+            },
+            {
+              "title": "Level 1 Seed 11 — browser receives level=1, original IDs gone, mutated IDs present",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 741,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[ACTIVATION] Requested: level=1 seed=11 | Browser received: level=1 seed=11\n"
+                        },
+                        {
+                          "text": "[ACTIVATION] Level 1 Seed 11 actual MUTATED IDs:\n"
+                        },
+                        {
+                          "text": "  username-input  id = \"username-xd5c\"  (was: \"username\")\n"
+                        },
+                        {
+                          "text": "  password-input  id = \"password-xa8f\"  (was: \"password\")\n"
+                        },
+                        {
+                          "text": "  login-action    id = \"login-x656\"     (was: \"login-btn\")\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-30T13:40:29.561Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "29563fc4f25704e7e225-e864f60440c0721f4eaf",
+              "file": "mutation-activation.spec.js",
+              "line": 131,
+              "column": 3
+            },
+            {
+              "title": "Server config and browser globals are in sync after set-mutation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 714,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[ACTIVATION SYNC]\n"
+                        },
+                        {
+                          "text": "Requested: { level: \u001b[33m3\u001b[39m, seed: \u001b[33m22\u001b[39m }\n"
+                        },
+                        {
+                          "text": "Set API: { ok: \u001b[33mtrue\u001b[39m, level: \u001b[33m3\u001b[39m, seed: \u001b[33m22\u001b[39m }\n"
+                        },
+                        {
+                          "text": "Server before navigation: { level: \u001b[33m3\u001b[39m, seed: \u001b[33m22\u001b[39m }\n"
+                        },
+                        {
+                          "text": "Browser: { level: \u001b[33m3\u001b[39m, seed: \u001b[33m22\u001b[39m }\n"
+                        },
+                        {
+                          "text": "Server after navigation: { level: \u001b[33m3\u001b[39m, seed: \u001b[33m22\u001b[39m }\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-30T13:40:30.315Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "29563fc4f25704e7e225-f4f1c5008c40d381faf8",
+              "file": "mutation-activation.spec.js",
+              "line": 190,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-30T13:40:27.420Z",
+    "duration": 3760.0879999999997,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "phase": "Phase 2",
+  "environment": "Original unmutated UI",
+  "framework": "Playwright",
+  "browser": "Chromium",
+  "tests": {
+    "login_successful": "PASS",
+    "login_invalid_credentials": "PASS",
+    "product_search": "PASS",
+    "profile_update": "PASS",
+    "checkout_end_to_end": "PASS",
+    "empty_cart_redirect": "PASS"
+  },
+  "summary": {
+    "total": 6,
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0
+  },
+  "raw_report_location": "frontend/results/baseline/playwright-baseline.json"
+}

@@ -1,0 +1,18 @@
+{
+  "split": "test-id",
+  "ood_declaration": null,
+  "overall": {
+    "episodes": 120,
+    "success_count": 120,
+    "success_rate": 100.0,
+    "mean_return": 8.8,
+    "std_return": 0.6718,
+    "median_return": 8.8,
+    "mean_decisions": 4.0,
+    "median_decisions": 4.0,
+    "mean_decision_overhead": 0.0,
+    "wrong_action_rate": 0.0,
+    "invalid_action_rate": 0.0,
+    "execution_failure_rate": 0.0
+  }
+}
