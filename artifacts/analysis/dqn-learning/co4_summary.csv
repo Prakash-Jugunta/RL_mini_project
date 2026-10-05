@@ -1,0 +1,15 @@
+metric,value
+Final Training Episodes,15000
+Cumulative Environment Transitions,68459
+Replay Buffer Capacity,10000
+Trainable Parameters,69601
+Parameter Storage Size,278.4 KB / 271.88 KiB
+Checkpoint Size on Disk,1.14 MB
+First 90% Success Episode,463
+Stable After 90% Success Episode,463
+Cumulative Steps at Stabilization,4557
+Mean DQN Forward Pass Latency,0.6526 ms
+P95 DQN Forward Pass Latency,0.9492 ms
+Estimated Replay Buffer Memory,154.86 MB / 147.69 MiB
+Phase 17 Authoritative Mean Q Margin,0.1141
+Benchmark Saturation Caveat,YES

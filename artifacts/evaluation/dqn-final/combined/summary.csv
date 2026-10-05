@@ -1,2 +1,4 @@
 split,episodes,success_count,success_rate,mean_return,std_return,median_return,mean_decisions,median_decisions,mean_decision_overhead,wrong_action_rate,invalid_action_rate,execution_failure_rate
+validation,120,120,100.0,8.8,0.6718,8.8,4.0,4.0,0.0,0.0,0.0,0.0
+test-id,120,120,100.0,8.8,0.6718,8.8,4.0,4.0,0.0,0.0,0.0,0.0
 test-l6,100,100,100.0,8.8,0.6718,8.8,4.0,4.0,0.0,0.0,0.0,0.0

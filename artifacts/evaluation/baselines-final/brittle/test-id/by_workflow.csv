@@ -1,0 +1,5 @@
+workflow,episodes,success_count,success_rate
+LOGIN,30,22,73.33
+SEARCH,30,22,73.33
+PROFILE,30,22,73.33
+CHECKOUT,30,22,73.33

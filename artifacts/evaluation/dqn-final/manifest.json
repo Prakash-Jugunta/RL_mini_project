@@ -1,6 +1,6 @@
 {
   "evaluation_version": "phase14-dqn-eval-v1",
-  "timestamp": "2026-10-03T12:19:04.428393",
+  "timestamp": "2026-10-04T22:10:27.035527",
   "checkpoint": {
     "path": "artifacts/dqn/phase13-v1/latest_checkpoint.pt",
     "sha256": "1ad8de13df71acb5f9ca1f3bfea25b050c1f0bbc901f56235af1ba60e3c01753",
@@ -20,8 +20,8 @@
     "browser_adapter": "PlaywrightBrowserAdapter"
   },
   "counts": {
-    "validation": 0,
-    "test_id": 0,
+    "validation": 120,
+    "test_id": 120,
     "test_l6": 100
   },
   "workflows": [

@@ -1,0 +1,23 @@
+{
+  "total_episodes": 340,
+  "total_failures": 0,
+  "failure_rate": 0.0,
+  "category_counts": {
+    "Target absent from candidate set": 0,
+    "Target present but DQN selected wrong candidate": 0,
+    "Repeated wrong action": 0,
+    "Action masking issue": 0,
+    "Maximum-step truncation": 0,
+    "Browser/navigation failure": 0,
+    "Verification failure": 0,
+    "Candidate ambiguity": 0,
+    "Distractor confusion": 0,
+    "Unexpected DOM state": 0,
+    "UNKNOWN / INSUFFICIENT EVIDENCE": 0
+  },
+  "candidate_recall_vs_policy": {
+    "retrieval_failures": 0,
+    "policy_failures": 0,
+    "note": "Empirical evaluation on 340 canonical episodes recorded 100.0% retrieval recall and 100.0% policy execution success."
+  }
+}

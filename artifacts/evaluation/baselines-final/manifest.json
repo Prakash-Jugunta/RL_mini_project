@@ -1,0 +1,14 @@
+{
+  "evaluation_version": "phase15-baselines-eval-v2",
+  "timestamp": "2026-10-04T22:34:49.251939",
+  "target_methods": [
+    "heuristic"
+  ],
+  "target_splits": [
+    "validation",
+    "test-id",
+    "test-l6"
+  ],
+  "reward_version": "phase8-v1",
+  "base_url": "http://localhost:3000"
+}

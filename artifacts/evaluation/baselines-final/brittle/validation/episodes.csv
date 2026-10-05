@@ -1,0 +1,121 @@
+method,split,episode_id,workflow,mutation_level,mutation_seed,environment_seed,policy_seed,success,return,decisions,optimal_decisions,decision_overhead,successful_step_actions,wrong_step_actions,invalid_actions,execution_failures,failure_reason,terminated,truncated
+brittle,validation,8,LOGIN,0,11,1815993211,0,True,,,4,,,,,0,,True,False
+brittle,validation,18,LOGIN,0,22,786773086,0,True,,,4,,,,,0,,True,False
+brittle,validation,28,LOGIN,0,33,1369600536,0,True,,,4,,,,,0,,True,False
+brittle,validation,38,LOGIN,0,44,881243063,0,True,,,4,,,,,0,,True,False
+brittle,validation,48,LOGIN,0,55,92293454,0,True,,,4,,,,,0,,True,False
+brittle,validation,58,LOGIN,1,11,838231427,0,False,,,4,,,,,1,locator_failure: Locator.fill: Timeout 3000ms exceeded...,True,False
+brittle,validation,68,LOGIN,1,22,389632446,0,False,,,4,,,,,1,locator_failure: Locator.fill: Timeout 3000ms exceeded...,True,False
+brittle,validation,78,LOGIN,1,33,300401709,0,False,,,4,,,,,1,locator_failure: Locator.fill: Timeout 3000ms exceeded...,True,False
+brittle,validation,88,LOGIN,1,44,1785443531,0,False,,,4,,,,,1,locator_failure: Locator.fill: Timeout 3000ms exceeded...,True,False
+brittle,validation,98,LOGIN,1,55,2007938191,0,False,,,4,,,,,1,locator_failure: Locator.fill: Timeout 3000ms exceeded...,True,False
+brittle,validation,108,LOGIN,2,11,32040917,0,True,,,4,,,,,0,,True,False
+brittle,validation,118,LOGIN,2,22,2049407051,0,True,,,4,,,,,0,,True,False
+brittle,validation,128,LOGIN,2,33,954820494,0,True,,,4,,,,,0,,True,False
+brittle,validation,138,LOGIN,2,44,1000303505,0,True,,,4,,,,,0,,True,False
+brittle,validation,148,LOGIN,2,55,1580431555,0,True,,,4,,,,,0,,True,False
+brittle,validation,158,LOGIN,3,11,732750462,0,True,,,4,,,,,0,,True,False
+brittle,validation,168,LOGIN,3,22,1625207661,0,True,,,4,,,,,0,,True,False
+brittle,validation,178,LOGIN,3,33,2093467632,0,True,,,4,,,,,0,,True,False
+brittle,validation,188,LOGIN,3,44,1865808066,0,True,,,4,,,,,0,,True,False
+brittle,validation,198,LOGIN,3,55,1922769094,0,True,,,4,,,,,0,,True,False
+brittle,validation,208,LOGIN,4,11,1357797428,0,True,,,4,,,,,0,,True,False
+brittle,validation,218,LOGIN,4,22,1032697607,0,True,,,4,,,,,0,,True,False
+brittle,validation,228,LOGIN,4,33,1134156052,0,True,,,4,,,,,0,,True,False
+brittle,validation,238,LOGIN,4,44,66659205,0,True,,,4,,,,,0,,True,False
+brittle,validation,248,LOGIN,4,55,1642358632,0,True,,,4,,,,,0,,True,False
+brittle,validation,258,LOGIN,5,11,2041658394,0,False,,,4,,,,,1,locator_failure: Locator.fill: Timeout 3000ms exceeded...,True,False
+brittle,validation,268,LOGIN,5,22,683367863,0,True,,,4,,,,,0,,True,False
+brittle,validation,278,LOGIN,5,33,1179277186,0,False,,,4,,,,,1,locator_failure: Locator.fill: Timeout 3000ms exceeded...,True,False
+brittle,validation,288,LOGIN,5,44,144783073,0,True,,,4,,,,,0,,True,False
+brittle,validation,298,LOGIN,5,55,1971877345,0,False,,,4,,,,,1,locator_failure: Locator.fill: Timeout 3000ms exceeded...,True,False
+brittle,validation,308,SEARCH,0,11,1142965932,0,True,,,3,,,,,0,,True,False
+brittle,validation,318,SEARCH,0,22,640100898,0,True,,,3,,,,,0,,True,False
+brittle,validation,328,SEARCH,0,33,1330916487,0,True,,,3,,,,,0,,True,False
+brittle,validation,338,SEARCH,0,44,662359430,0,True,,,3,,,,,0,,True,False
+brittle,validation,348,SEARCH,0,55,1266372165,0,True,,,3,,,,,0,,True,False
+brittle,validation,358,SEARCH,1,11,428059175,0,False,,,3,,,,,1,locator_failure: Locator.fill: Timeout 3000ms exceeded...,True,False
+brittle,validation,368,SEARCH,1,22,907708469,0,False,,,3,,,,,1,locator_failure: Locator.fill: Timeout 3000ms exceeded...,True,False
+brittle,validation,378,SEARCH,1,33,224613653,0,False,,,3,,,,,1,locator_failure: Locator.fill: Timeout 3000ms exceeded...,True,False
+brittle,validation,388,SEARCH,1,44,893376564,0,False,,,3,,,,,1,locator_failure: Locator.fill: Timeout 3000ms exceeded...,True,False
+brittle,validation,398,SEARCH,1,55,1665075826,0,False,,,3,,,,,1,locator_failure: Locator.fill: Timeout 3000ms exceeded...,True,False
+brittle,validation,408,SEARCH,2,11,517228848,0,True,,,3,,,,,0,,True,False
+brittle,validation,418,SEARCH,2,22,1966796120,0,True,,,3,,,,,0,,True,False
+brittle,validation,428,SEARCH,2,33,455541873,0,True,,,3,,,,,0,,True,False
+brittle,validation,438,SEARCH,2,44,1165502157,0,True,,,3,,,,,0,,True,False
+brittle,validation,448,SEARCH,2,55,2135406445,0,True,,,3,,,,,0,,True,False
+brittle,validation,458,SEARCH,3,11,94876492,0,True,,,3,,,,,0,,True,False
+brittle,validation,468,SEARCH,3,22,1277290186,0,True,,,3,,,,,0,,True,False
+brittle,validation,478,SEARCH,3,33,1132383664,0,True,,,3,,,,,0,,True,False
+brittle,validation,488,SEARCH,3,44,809439757,0,True,,,3,,,,,0,,True,False
+brittle,validation,498,SEARCH,3,55,388232014,0,True,,,3,,,,,0,,True,False
+brittle,validation,508,SEARCH,4,11,1206551172,0,True,,,3,,,,,0,,True,False
+brittle,validation,518,SEARCH,4,22,1861751892,0,True,,,3,,,,,0,,True,False
+brittle,validation,528,SEARCH,4,33,1299453963,0,True,,,3,,,,,0,,True,False
+brittle,validation,538,SEARCH,4,44,1992834282,0,True,,,3,,,,,0,,True,False
+brittle,validation,548,SEARCH,4,55,1500376431,0,True,,,3,,,,,0,,True,False
+brittle,validation,558,SEARCH,5,11,236877580,0,False,,,3,,,,,1,locator_failure: Locator.fill: Timeout 3000ms exceeded...,True,False
+brittle,validation,568,SEARCH,5,22,1651924706,0,True,,,3,,,,,0,,True,False
+brittle,validation,578,SEARCH,5,33,39508301,0,False,,,3,,,,,1,locator_failure: Locator.fill: Timeout 3000ms exceeded...,True,False
+brittle,validation,588,SEARCH,5,44,47494233,0,True,,,3,,,,,0,,True,False
+brittle,validation,598,SEARCH,5,55,1993188824,0,False,,,3,,,,,1,locator_failure: Locator.fill: Timeout 3000ms exceeded...,True,False
+brittle,validation,608,PROFILE,0,11,1177850997,0,True,,,4,,,,,0,,True,False
+brittle,validation,618,PROFILE,0,22,1264544956,0,True,,,4,,,,,0,,True,False
+brittle,validation,628,PROFILE,0,33,126502562,0,True,,,4,,,,,0,,True,False
+brittle,validation,638,PROFILE,0,44,1366637238,0,True,,,4,,,,,0,,True,False
+brittle,validation,648,PROFILE,0,55,231272152,0,True,,,4,,,,,0,,True,False
+brittle,validation,658,PROFILE,1,11,219938821,0,False,,,4,,,,,1,locator_failure: Locator.fill: Timeout 3000ms exceeded...,True,False
+brittle,validation,668,PROFILE,1,22,407452783,0,False,,,4,,,,,1,locator_failure: Locator.fill: Timeout 3000ms exceeded...,True,False
+brittle,validation,678,PROFILE,1,33,344830236,0,False,,,4,,,,,1,locator_failure: Locator.fill: Timeout 3000ms exceeded...,True,False
+brittle,validation,688,PROFILE,1,44,1401417951,0,False,,,4,,,,,1,locator_failure: Locator.fill: Timeout 3000ms exceeded...,True,False
+brittle,validation,698,PROFILE,1,55,278803605,0,False,,,4,,,,,1,locator_failure: Locator.fill: Timeout 3000ms exceeded...,True,False
+brittle,validation,708,PROFILE,2,11,1712428167,0,True,,,4,,,,,0,,True,False
+brittle,validation,718,PROFILE,2,22,1938438988,0,True,,,4,,,,,0,,True,False
+brittle,validation,728,PROFILE,2,33,1835701424,0,True,,,4,,,,,0,,True,False
+brittle,validation,738,PROFILE,2,44,449448579,0,True,,,4,,,,,0,,True,False
+brittle,validation,748,PROFILE,2,55,1517487505,0,True,,,4,,,,,0,,True,False
+brittle,validation,758,PROFILE,3,11,1941308189,0,True,,,4,,,,,0,,True,False
+brittle,validation,768,PROFILE,3,22,786745129,0,True,,,4,,,,,0,,True,False
+brittle,validation,778,PROFILE,3,33,983895296,0,True,,,4,,,,,0,,True,False
+brittle,validation,788,PROFILE,3,44,2093290717,0,True,,,4,,,,,0,,True,False
+brittle,validation,798,PROFILE,3,55,1995311521,0,True,,,4,,,,,0,,True,False
+brittle,validation,808,PROFILE,4,11,1616208972,0,True,,,4,,,,,0,,True,False
+brittle,validation,818,PROFILE,4,22,788734676,0,True,,,4,,,,,0,,True,False
+brittle,validation,828,PROFILE,4,33,2063008822,0,True,,,4,,,,,0,,True,False
+brittle,validation,838,PROFILE,4,44,9259166,0,True,,,4,,,,,0,,True,False
+brittle,validation,848,PROFILE,4,55,1521368372,0,True,,,4,,,,,0,,True,False
+brittle,validation,858,PROFILE,5,11,959396527,0,False,,,4,,,,,1,locator_failure: Locator.fill: Timeout 3000ms exceeded...,True,False
+brittle,validation,868,PROFILE,5,22,750269045,0,True,,,4,,,,,0,,True,False
+brittle,validation,878,PROFILE,5,33,1733961058,0,False,,,4,,,,,1,locator_failure: Locator.fill: Timeout 3000ms exceeded...,True,False
+brittle,validation,888,PROFILE,5,44,1652689349,0,True,,,4,,,,,0,,True,False
+brittle,validation,898,PROFILE,5,55,847073255,0,False,,,4,,,,,1,locator_failure: Locator.fill: Timeout 3000ms exceeded...,True,False
+brittle,validation,908,CHECKOUT,0,11,643458136,0,True,,,5,,,,,0,,True,False
+brittle,validation,918,CHECKOUT,0,22,834075938,0,True,,,5,,,,,0,,True,False
+brittle,validation,928,CHECKOUT,0,33,1680120438,0,True,,,5,,,,,0,,True,False
+brittle,validation,938,CHECKOUT,0,44,1731440045,0,True,,,5,,,,,0,,True,False
+brittle,validation,948,CHECKOUT,0,55,1783190793,0,True,,,5,,,,,0,,True,False
+brittle,validation,958,CHECKOUT,1,11,1333544949,0,False,,,5,,,,,1,locator_failure: Locator.click: Timeout 3000ms exceede...,True,False
+brittle,validation,968,CHECKOUT,1,22,286972948,0,False,,,5,,,,,1,locator_failure: Locator.click: Timeout 3000ms exceede...,True,False
+brittle,validation,978,CHECKOUT,1,33,827488861,0,False,,,5,,,,,1,locator_failure: Locator.click: Timeout 3000ms exceede...,True,False
+brittle,validation,988,CHECKOUT,1,44,163344969,0,False,,,5,,,,,1,locator_failure: Locator.click: Timeout 3000ms exceede...,True,False
+brittle,validation,998,CHECKOUT,1,55,531045973,0,False,,,5,,,,,1,locator_failure: Locator.click: Timeout 3000ms exceede...,True,False
+brittle,validation,1008,CHECKOUT,2,11,4298098,0,True,,,5,,,,,0,,True,False
+brittle,validation,1018,CHECKOUT,2,22,596184997,0,True,,,5,,,,,0,,True,False
+brittle,validation,1028,CHECKOUT,2,33,575503905,0,True,,,5,,,,,0,,True,False
+brittle,validation,1038,CHECKOUT,2,44,352612942,0,True,,,5,,,,,0,,True,False
+brittle,validation,1048,CHECKOUT,2,55,1560509941,0,True,,,5,,,,,0,,True,False
+brittle,validation,1058,CHECKOUT,3,11,101608052,0,True,,,5,,,,,0,,True,False
+brittle,validation,1068,CHECKOUT,3,22,357670662,0,True,,,5,,,,,0,,True,False
+brittle,validation,1078,CHECKOUT,3,33,1140376763,0,True,,,5,,,,,0,,True,False
+brittle,validation,1088,CHECKOUT,3,44,1467640036,0,True,,,5,,,,,0,,True,False
+brittle,validation,1098,CHECKOUT,3,55,132071839,0,True,,,5,,,,,0,,True,False
+brittle,validation,1108,CHECKOUT,4,11,1894788870,0,True,,,5,,,,,0,,True,False
+brittle,validation,1118,CHECKOUT,4,22,2052023829,0,True,,,5,,,,,0,,True,False
+brittle,validation,1128,CHECKOUT,4,33,448563241,0,True,,,5,,,,,0,,True,False
+brittle,validation,1138,CHECKOUT,4,44,707198124,0,True,,,5,,,,,0,,True,False
+brittle,validation,1148,CHECKOUT,4,55,561750711,0,True,,,5,,,,,0,,True,False
+brittle,validation,1158,CHECKOUT,5,11,1898018682,0,False,,,5,,,,,1,locator_failure: Locator.click: Timeout 3000ms exceede...,True,False
+brittle,validation,1168,CHECKOUT,5,22,1477785218,0,True,,,5,,,,,0,,True,False
+brittle,validation,1178,CHECKOUT,5,33,408852616,0,False,,,5,,,,,1,locator_failure: Locator.click: Timeout 3000ms exceede...,True,False
+brittle,validation,1188,CHECKOUT,5,44,1087499624,0,True,,,5,,,,,0,,True,False
+brittle,validation,1198,CHECKOUT,5,55,1965033847,0,False,,,5,,,,,1,locator_failure: Locator.click: Timeout 3000ms exceede...,True,False

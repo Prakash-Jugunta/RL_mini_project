@@ -1,0 +1,18 @@
+{
+  "method": "heuristic",
+  "split": "test-l6",
+  "overall": {
+    "episodes": 100,
+    "success_count": 50,
+    "success_rate": 50.0,
+    "mean_return": -1.5875,
+    "std_return": 9.9747,
+    "median_return": -1.075,
+    "mean_decisions": 11.75,
+    "median_decisions": 12.0,
+    "mean_decision_overhead": 7.75,
+    "wrong_action_rate": 0.475,
+    "invalid_action_rate": 0.0,
+    "execution_failure_rate": 0.0
+  }
+}

@@ -1,0 +1,14 @@
+split,mutation_level,numeric_level,episodes,success_count,success_rate,mean_return,mean_wrong_actions
+validation,L0,0,20,20,100.0,8.8,0.0
+validation,L1,1,20,20,100.0,8.8,0.0
+validation,L2,2,20,20,100.0,8.8,0.0
+validation,L3,3,20,20,100.0,8.8,0.0
+validation,L4,4,20,20,100.0,8.8,0.0
+validation,L5,5,20,20,100.0,8.8,0.0
+test-id,L0,0,20,20,100.0,8.8,0.0
+test-id,L1,1,20,20,100.0,8.8,0.0
+test-id,L2,2,20,20,100.0,8.8,0.0
+test-id,L3,3,20,20,100.0,8.8,0.0
+test-id,L4,4,20,20,100.0,8.8,0.0
+test-id,L5,5,20,20,100.0,8.8,0.0
+test-l6,L6 (HELD-OUT / OOD),6,100,100,100.0,8.8,0.0

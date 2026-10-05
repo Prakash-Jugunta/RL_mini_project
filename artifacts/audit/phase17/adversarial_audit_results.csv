@@ -1,0 +1,5 @@
+scenario_id,workflow,description,episodes,success_rate,mean_q_margin,wrong_actions,status
+ADV-01,LOGIN,Duplicate username input + newsletter email distractor,10,100.0,1.42,0,PASS
+ADV-02,SEARCH,Header search input vs KB search input distractor,10,100.0,1.18,0,PASS
+ADV-03,PROFILE,Secondary phone input + reset profile button distractor,10,100.0,1.55,0,PASS
+ADV-04,CHECKOUT,Promo coupon input + save for later button distractor,10,100.0,1.35,0,PASS

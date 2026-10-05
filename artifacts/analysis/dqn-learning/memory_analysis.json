@@ -1,0 +1,18 @@
+{
+  "replay_capacity": 10000,
+  "replay_bytes": 154860000,
+  "replay_mb_decimal": 154.86,
+  "replay_mib_binary": 147.69,
+  "bytes_per_transition": 15486,
+  "kb_per_transition_decimal": 15.49,
+  "kib_per_transition_binary": 15.12,
+  "observation_tensors": {
+    "objective_shape": "(64,)",
+    "context_shape": "(30,)",
+    "candidates_shape": "(20, 91)",
+    "candidate_mask_shape": "(20,)",
+    "total_float32_values_per_obs": 1934
+  },
+  "network_parameter_memory_kb": 278.4,
+  "network_parameter_memory_kib": 271.88
+}

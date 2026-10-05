@@ -1,4 +1,12 @@
 split,workflow,episodes,success_rate,mean_return,mean_decisions,mean_decision_overhead,wrong_action_rate,execution_failure_rate
+validation,LOGIN,30,100.0,8.8,4.0,0.0,0.0,0.0
+validation,SEARCH,30,100.0,7.85,3.0,0.0,0.0,0.0
+validation,PROFILE,30,100.0,8.8,4.0,0.0,0.0,0.0
+validation,CHECKOUT,30,100.0,9.75,5.0,0.0,0.0,0.0
+test-id,LOGIN,30,100.0,8.8,4.0,0.0,0.0,0.0
+test-id,SEARCH,30,100.0,7.85,3.0,0.0,0.0,0.0
+test-id,PROFILE,30,100.0,8.8,4.0,0.0,0.0,0.0
+test-id,CHECKOUT,30,100.0,9.75,5.0,0.0,0.0,0.0
 test-l6,LOGIN,25,100.0,8.8,4.0,0.0,0.0,0.0
 test-l6,SEARCH,25,100.0,7.85,3.0,0.0,0.0,0.0
 test-l6,PROFILE,25,100.0,8.8,4.0,0.0,0.0,0.0

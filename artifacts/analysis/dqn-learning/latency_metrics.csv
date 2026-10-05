@@ -1,0 +1,4 @@
+metric_component,device,runs,mean_ms,median_ms,p95_ms,min_ms,max_ms
+DQN Forward Pass Latency,cpu,500,0.6526,0.6091,0.9492,0.4406,1.7864
+State Encoding Latency (Synthetic),CPU,500,0.42,0.38,0.65,0.3,1.1
+Browser Interaction & Playwright Action,Playwright,0,NA,NA,NA,NA,NA

@@ -1,0 +1,20 @@
+{
+  "total_training_episodes": 15000,
+  "total_environment_transitions": 68459,
+  "successful_episodes_during_training": 14728,
+  "training_success_rate_overall": 98.19,
+  "mean_decisions_per_episode_near_convergence": 4.42,
+  "milestones": {
+    "episodes_to_50pct_success": 135,
+    "environment_steps_to_50pct_success": 1929,
+    "episodes_to_80pct_success": 422,
+    "environment_steps_to_80pct_success": 4351,
+    "episodes_to_90pct_success": 463,
+    "environment_steps_to_90pct_success": 4557,
+    "episodes_to_95pct_success": 483,
+    "environment_steps_to_95pct_success": 4640,
+    "episodes_to_99pct_success": 634,
+    "environment_steps_to_99pct_success": 5391
+  },
+  "conservative_conclusion": "The DQN reached the defined 90% rolling-success threshold after 463 episodes (4557 environment interactions). Phase 17 found the canonical benchmark to be structurally easy/saturated, therefore the observed learning speed should not be interpreted as evidence of general sample efficiency."
+}

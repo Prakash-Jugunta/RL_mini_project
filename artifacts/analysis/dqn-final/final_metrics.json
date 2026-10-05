@@ -1,0 +1,1053 @@
+{
+  "checkpoint": {
+    "path": "artifacts/dqn/phase13-v1/latest_checkpoint.pt",
+    "sha256": "1ad8de13df71acb5f9ca1f3bfea25b050c1f0bbc901f56235af1ba60e3c01753"
+  },
+  "integrity": {
+    "status": "PASS",
+    "input_dir": "E:\\sem7\\RL\\RL_replay\\artifacts\\evaluation\\dqn-final",
+    "checkpoint_path": "artifacts/dqn/phase13-v1/latest_checkpoint.pt",
+    "sha256": "1ad8de13df71acb5f9ca1f3bfea25b050c1f0bbc901f56235af1ba60e3c01753",
+    "training_during_evaluation": false,
+    "exploration_during_evaluation": false,
+    "l6_leakage_detected": false,
+    "split_counts": {
+      "validation": 120,
+      "test-id": 120,
+      "test-l6": 100
+    },
+    "missing_splits": [],
+    "errors": []
+  },
+  "splits": {
+    "validation": {
+      "split": "validation",
+      "episodes": 120,
+      "success_count": 120,
+      "failed_count": 0,
+      "success_rate": 100.0,
+      "wilson_ci_95": [
+        96.9,
+        100.0
+      ],
+      "mean_return": 8.8,
+      "median_return": 8.8,
+      "std_return": 0.6718,
+      "min_return": 7.85,
+      "max_return": 9.75,
+      "mean_steps": 4.0,
+      "median_steps": 4.0,
+      "mean_wrong_actions": 0.0,
+      "mean_invalid_actions": 0.0,
+      "latency": {
+        "mean": "NA",
+        "median": "NA",
+        "p95": "NA"
+      }
+    },
+    "test_id": {
+      "split": "test-id",
+      "episodes": 120,
+      "success_count": 120,
+      "failed_count": 0,
+      "success_rate": 100.0,
+      "wilson_ci_95": [
+        96.9,
+        100.0
+      ],
+      "mean_return": 8.8,
+      "median_return": 8.8,
+      "std_return": 0.6718,
+      "min_return": 7.85,
+      "max_return": 9.75,
+      "mean_steps": 4.0,
+      "median_steps": 4.0,
+      "mean_wrong_actions": 0.0,
+      "mean_invalid_actions": 0.0,
+      "latency": {
+        "mean": "NA",
+        "median": "NA",
+        "p95": "NA"
+      }
+    },
+    "test_l6": {
+      "split": "test-l6",
+      "episodes": 100,
+      "success_count": 100,
+      "failed_count": 0,
+      "success_rate": 100.0,
+      "wilson_ci_95": [
+        96.3,
+        100.0
+      ],
+      "mean_return": 8.8,
+      "median_return": 8.8,
+      "std_return": 0.6718,
+      "min_return": 7.85,
+      "max_return": 9.75,
+      "mean_steps": 4.0,
+      "median_steps": 4.0,
+      "mean_wrong_actions": 0.0,
+      "mean_invalid_actions": 0.0,
+      "latency": {
+        "mean": "NA",
+        "median": "NA",
+        "p95": "NA"
+      }
+    }
+  },
+  "generalization": {
+    "val_to_test_id": {
+      "abs_success_drop_pp": 0.0,
+      "rel_success_drop_pct": 0.0,
+      "return_degradation": 0.0,
+      "step_increase": 0.0,
+      "wrong_action_increase": 0.0
+    },
+    "val_to_test_l6": {
+      "abs_success_drop_pp": 0.0,
+      "rel_success_drop_pct": 0.0,
+      "return_degradation": 0.0,
+      "step_increase": 0.0,
+      "wrong_action_increase": 0.0
+    },
+    "test_id_to_test_l6": {
+      "abs_success_drop_pp": 0.0,
+      "rel_success_drop_pct": 0.0,
+      "return_degradation": 0.0,
+      "step_increase": 0.0,
+      "wrong_action_increase": 0.0
+    }
+  },
+  "workflows": [
+    {
+      "split": "validation",
+      "workflow": "LOGIN",
+      "episodes": 30,
+      "success_count": 30,
+      "success_rate": 100.0,
+      "mean_return": 8.8,
+      "mean_steps": 4.0,
+      "mean_wrong_actions": 0.0
+    },
+    {
+      "split": "validation",
+      "workflow": "SEARCH",
+      "episodes": 30,
+      "success_count": 30,
+      "success_rate": 100.0,
+      "mean_return": 7.85,
+      "mean_steps": 3.0,
+      "mean_wrong_actions": 0.0
+    },
+    {
+      "split": "validation",
+      "workflow": "PROFILE",
+      "episodes": 30,
+      "success_count": 30,
+      "success_rate": 100.0,
+      "mean_return": 8.8,
+      "mean_steps": 4.0,
+      "mean_wrong_actions": 0.0
+    },
+    {
+      "split": "validation",
+      "workflow": "CHECKOUT",
+      "episodes": 30,
+      "success_count": 30,
+      "success_rate": 100.0,
+      "mean_return": 9.75,
+      "mean_steps": 5.0,
+      "mean_wrong_actions": 0.0
+    },
+    {
+      "split": "test-id",
+      "workflow": "LOGIN",
+      "episodes": 30,
+      "success_count": 30,
+      "success_rate": 100.0,
+      "mean_return": 8.8,
+      "mean_steps": 4.0,
+      "mean_wrong_actions": 0.0
+    },
+    {
+      "split": "test-id",
+      "workflow": "SEARCH",
+      "episodes": 30,
+      "success_count": 30,
+      "success_rate": 100.0,
+      "mean_return": 7.85,
+      "mean_steps": 3.0,
+      "mean_wrong_actions": 0.0
+    },
+    {
+      "split": "test-id",
+      "workflow": "PROFILE",
+      "episodes": 30,
+      "success_count": 30,
+      "success_rate": 100.0,
+      "mean_return": 8.8,
+      "mean_steps": 4.0,
+      "mean_wrong_actions": 0.0
+    },
+    {
+      "split": "test-id",
+      "workflow": "CHECKOUT",
+      "episodes": 30,
+      "success_count": 30,
+      "success_rate": 100.0,
+      "mean_return": 9.75,
+      "mean_steps": 5.0,
+      "mean_wrong_actions": 0.0
+    },
+    {
+      "split": "test-l6",
+      "workflow": "LOGIN",
+      "episodes": 25,
+      "success_count": 25,
+      "success_rate": 100.0,
+      "mean_return": 8.8,
+      "mean_steps": 4.0,
+      "mean_wrong_actions": 0.0
+    },
+    {
+      "split": "test-l6",
+      "workflow": "SEARCH",
+      "episodes": 25,
+      "success_count": 25,
+      "success_rate": 100.0,
+      "mean_return": 7.85,
+      "mean_steps": 3.0,
+      "mean_wrong_actions": 0.0
+    },
+    {
+      "split": "test-l6",
+      "workflow": "PROFILE",
+      "episodes": 25,
+      "success_count": 25,
+      "success_rate": 100.0,
+      "mean_return": 8.8,
+      "mean_steps": 4.0,
+      "mean_wrong_actions": 0.0
+    },
+    {
+      "split": "test-l6",
+      "workflow": "CHECKOUT",
+      "episodes": 25,
+      "success_count": 25,
+      "success_rate": 100.0,
+      "mean_return": 9.75,
+      "mean_steps": 5.0,
+      "mean_wrong_actions": 0.0
+    }
+  ],
+  "mutations": {
+    "levels": [
+      {
+        "split": "validation",
+        "mutation_level": "L0",
+        "numeric_level": 0,
+        "episodes": 20,
+        "success_count": 20,
+        "success_rate": 100.0,
+        "mean_return": 8.8,
+        "mean_wrong_actions": 0.0
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L1",
+        "numeric_level": 1,
+        "episodes": 20,
+        "success_count": 20,
+        "success_rate": 100.0,
+        "mean_return": 8.8,
+        "mean_wrong_actions": 0.0
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L2",
+        "numeric_level": 2,
+        "episodes": 20,
+        "success_count": 20,
+        "success_rate": 100.0,
+        "mean_return": 8.8,
+        "mean_wrong_actions": 0.0
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L3",
+        "numeric_level": 3,
+        "episodes": 20,
+        "success_count": 20,
+        "success_rate": 100.0,
+        "mean_return": 8.8,
+        "mean_wrong_actions": 0.0
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L4",
+        "numeric_level": 4,
+        "episodes": 20,
+        "success_count": 20,
+        "success_rate": 100.0,
+        "mean_return": 8.8,
+        "mean_wrong_actions": 0.0
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L5",
+        "numeric_level": 5,
+        "episodes": 20,
+        "success_count": 20,
+        "success_rate": 100.0,
+        "mean_return": 8.8,
+        "mean_wrong_actions": 0.0
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L0",
+        "numeric_level": 0,
+        "episodes": 20,
+        "success_count": 20,
+        "success_rate": 100.0,
+        "mean_return": 8.8,
+        "mean_wrong_actions": 0.0
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L1",
+        "numeric_level": 1,
+        "episodes": 20,
+        "success_count": 20,
+        "success_rate": 100.0,
+        "mean_return": 8.8,
+        "mean_wrong_actions": 0.0
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L2",
+        "numeric_level": 2,
+        "episodes": 20,
+        "success_count": 20,
+        "success_rate": 100.0,
+        "mean_return": 8.8,
+        "mean_wrong_actions": 0.0
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L3",
+        "numeric_level": 3,
+        "episodes": 20,
+        "success_count": 20,
+        "success_rate": 100.0,
+        "mean_return": 8.8,
+        "mean_wrong_actions": 0.0
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L4",
+        "numeric_level": 4,
+        "episodes": 20,
+        "success_count": 20,
+        "success_rate": 100.0,
+        "mean_return": 8.8,
+        "mean_wrong_actions": 0.0
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L5",
+        "numeric_level": 5,
+        "episodes": 20,
+        "success_count": 20,
+        "success_rate": 100.0,
+        "mean_return": 8.8,
+        "mean_wrong_actions": 0.0
+      },
+      {
+        "split": "test-l6",
+        "mutation_level": "L6 (HELD-OUT / OOD)",
+        "numeric_level": 6,
+        "episodes": 100,
+        "success_count": 100,
+        "success_rate": 100.0,
+        "mean_return": 8.8,
+        "mean_wrong_actions": 0.0
+      }
+    ],
+    "presets": [
+      {
+        "split": "validation",
+        "mutation_level": "L0",
+        "mutation_seed": 11,
+        "preset_name": "Original (L0)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L0",
+        "mutation_seed": 22,
+        "preset_name": "Original (L0)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L0",
+        "mutation_seed": 33,
+        "preset_name": "Original (L0)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L0",
+        "mutation_seed": 44,
+        "preset_name": "Original (L0)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L0",
+        "mutation_seed": 55,
+        "preset_name": "Original (L0)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L1",
+        "mutation_seed": 11,
+        "preset_name": "ID + Class (L1)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L1",
+        "mutation_seed": 22,
+        "preset_name": "ID + Class (L1)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L1",
+        "mutation_seed": 33,
+        "preset_name": "ID + Class (L1)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L1",
+        "mutation_seed": 44,
+        "preset_name": "ID + Class (L1)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L1",
+        "mutation_seed": 55,
+        "preset_name": "ID + Class (L1)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L2",
+        "mutation_seed": 11,
+        "preset_name": "Text / Semantic (L2)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L2",
+        "mutation_seed": 22,
+        "preset_name": "Text / Semantic (L2)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L2",
+        "mutation_seed": 33,
+        "preset_name": "Text / Semantic (L2)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L2",
+        "mutation_seed": 44,
+        "preset_name": "Text / Semantic (L2)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L2",
+        "mutation_seed": 55,
+        "preset_name": "Text / Semantic (L2)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L3",
+        "mutation_seed": 11,
+        "preset_name": "Structural (L3)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L3",
+        "mutation_seed": 22,
+        "preset_name": "Structural (L3)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L3",
+        "mutation_seed": 33,
+        "preset_name": "Structural (L3)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L3",
+        "mutation_seed": 44,
+        "preset_name": "Structural (L3)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L3",
+        "mutation_seed": 55,
+        "preset_name": "Structural (L3)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L4",
+        "mutation_seed": 11,
+        "preset_name": "Distractor (L4)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L4",
+        "mutation_seed": 22,
+        "preset_name": "Distractor (L4)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L4",
+        "mutation_seed": 33,
+        "preset_name": "Distractor (L4)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L4",
+        "mutation_seed": 44,
+        "preset_name": "Distractor (L4)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L4",
+        "mutation_seed": 55,
+        "preset_name": "Distractor (L4)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L5",
+        "mutation_seed": 11,
+        "preset_name": "id+text (L5)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L5",
+        "mutation_seed": 22,
+        "preset_name": "text+position (L5)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L5",
+        "mutation_seed": 33,
+        "preset_name": "id+dom (L5)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L5",
+        "mutation_seed": 44,
+        "preset_name": "text+distractor (L5)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "validation",
+        "mutation_level": "L5",
+        "mutation_seed": 55,
+        "preset_name": "id+position (L5)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L0",
+        "mutation_seed": 11,
+        "preset_name": "Original (L0)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L0",
+        "mutation_seed": 22,
+        "preset_name": "Original (L0)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L0",
+        "mutation_seed": 33,
+        "preset_name": "Original (L0)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L0",
+        "mutation_seed": 44,
+        "preset_name": "Original (L0)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L0",
+        "mutation_seed": 55,
+        "preset_name": "Original (L0)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L1",
+        "mutation_seed": 11,
+        "preset_name": "ID + Class (L1)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L1",
+        "mutation_seed": 22,
+        "preset_name": "ID + Class (L1)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L1",
+        "mutation_seed": 33,
+        "preset_name": "ID + Class (L1)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L1",
+        "mutation_seed": 44,
+        "preset_name": "ID + Class (L1)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L1",
+        "mutation_seed": 55,
+        "preset_name": "ID + Class (L1)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L2",
+        "mutation_seed": 11,
+        "preset_name": "Text / Semantic (L2)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L2",
+        "mutation_seed": 22,
+        "preset_name": "Text / Semantic (L2)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L2",
+        "mutation_seed": 33,
+        "preset_name": "Text / Semantic (L2)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L2",
+        "mutation_seed": 44,
+        "preset_name": "Text / Semantic (L2)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L2",
+        "mutation_seed": 55,
+        "preset_name": "Text / Semantic (L2)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L3",
+        "mutation_seed": 11,
+        "preset_name": "Structural (L3)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L3",
+        "mutation_seed": 22,
+        "preset_name": "Structural (L3)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L3",
+        "mutation_seed": 33,
+        "preset_name": "Structural (L3)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L3",
+        "mutation_seed": 44,
+        "preset_name": "Structural (L3)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L3",
+        "mutation_seed": 55,
+        "preset_name": "Structural (L3)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L4",
+        "mutation_seed": 11,
+        "preset_name": "Distractor (L4)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L4",
+        "mutation_seed": 22,
+        "preset_name": "Distractor (L4)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L4",
+        "mutation_seed": 33,
+        "preset_name": "Distractor (L4)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L4",
+        "mutation_seed": 44,
+        "preset_name": "Distractor (L4)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L4",
+        "mutation_seed": 55,
+        "preset_name": "Distractor (L4)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L5",
+        "mutation_seed": 11,
+        "preset_name": "id+text (L5)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L5",
+        "mutation_seed": 22,
+        "preset_name": "text+position (L5)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L5",
+        "mutation_seed": 33,
+        "preset_name": "id+dom (L5)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L5",
+        "mutation_seed": 44,
+        "preset_name": "text+distractor (L5)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-id",
+        "mutation_level": "L5",
+        "mutation_seed": 55,
+        "preset_name": "id+position (L5)",
+        "episodes": 4,
+        "success_count": 4,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-l6",
+        "mutation_level": "L6",
+        "mutation_seed": 11,
+        "preset_name": "id+dom+distractor [HELD-OUT L6]",
+        "episodes": 20,
+        "success_count": 20,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-l6",
+        "mutation_level": "L6",
+        "mutation_seed": 22,
+        "preset_name": "text+type+position [HELD-OUT L6]",
+        "episodes": 20,
+        "success_count": 20,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-l6",
+        "mutation_level": "L6",
+        "mutation_seed": 33,
+        "preset_name": "id+text+dom [HELD-OUT L6]",
+        "episodes": 20,
+        "success_count": 20,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-l6",
+        "mutation_level": "L6",
+        "mutation_seed": 44,
+        "preset_name": "position+dom+distractor [HELD-OUT L6]",
+        "episodes": 20,
+        "success_count": 20,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      },
+      {
+        "split": "test-l6",
+        "mutation_level": "L6",
+        "mutation_seed": 55,
+        "preset_name": "id+text+dom+distractor [HELD-OUT L6]",
+        "episodes": 20,
+        "success_count": 20,
+        "success_rate": 100.0,
+        "mean_return": 8.8
+      }
+    ]
+  },
+  "failures": {
+    "total_episodes": 340,
+    "total_failures": 0,
+    "failure_rate": 0.0,
+    "category_counts": {
+      "Target absent from candidate set": 0,
+      "Target present but DQN selected wrong candidate": 0,
+      "Repeated wrong action": 0,
+      "Action masking issue": 0,
+      "Maximum-step truncation": 0,
+      "Browser/navigation failure": 0,
+      "Verification failure": 0,
+      "Candidate ambiguity": 0,
+      "Distractor confusion": 0,
+      "Unexpected DOM state": 0,
+      "UNKNOWN / INSUFFICIENT EVIDENCE": 0
+    },
+    "candidate_recall_vs_policy": {
+      "retrieval_failures": 0,
+      "policy_failures": 0,
+      "note": "Empirical evaluation on 340 canonical episodes recorded 100.0% retrieval recall and 100.0% policy execution success."
+    }
+  }
+}

@@ -1,0 +1,7 @@
+ablation_condition,episodes,successful_episodes,success_rate,success_drop_pp,mean_return,mean_wrong_actions
+Baseline (Unablated),20,0,0.0,100.0,1.1,1.0
+Text Features Removed,20,0,0.0,100.0,-1.0,1.0
+Structural Features Removed,20,0,0.0,100.0,-1.0,1.0
+Visual Features Removed,20,0,0.0,100.0,-0.9,1.0
+Objective Vector Removed,20,0,0.0,100.0,-1.0,1.0
+Context Vector Removed,20,0,0.0,100.0,-1.0,1.0

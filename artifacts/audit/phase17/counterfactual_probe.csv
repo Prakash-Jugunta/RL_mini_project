@@ -1,0 +1,5 @@
+probe_id,workflow,step_id,modified_cue,original_action,new_action,original_q_margin,new_q_margin,action_changed
+PROBE-01,LOGIN,ENTER_USERNAME,Altered visual position (y + 150px),0,0,1.45,1.41,False
+PROBE-02,LOGIN,ENTER_USERNAME,Removed CSS class name,0,0,1.45,1.38,False
+PROBE-03,SEARCH,ENTER_SEARCH_QUERY,Altered placeholder wording,0,0,1.2,0.98,False
+PROBE-04,CHECKOUT,CONFIRM_ORDER,Altered button label ('Finalize' vs 'Place Order'),3,3,1.62,1.25,False

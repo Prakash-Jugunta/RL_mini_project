@@ -1,0 +1,7 @@
+method,split,episodes,success_rate,mean_return,mean_decisions
+brittle,validation,120,73.33%,N/A,N/A
+brittle,test-id,120,73.33%,N/A,N/A
+brittle,test-l6,100,40.00%,N/A,N/A
+heuristic,validation,120,50.00%,-1.5875,11.75
+heuristic,test-id,120,50.00%,-1.5875,11.75
+heuristic,test-l6,100,50.00%,-1.5875,11.75

@@ -1,0 +1,5 @@
+workflow,brittle,heuristic
+LOGIN,63.5%,0.0%
+SEARCH,63.5%,100.0%
+PROFILE,63.5%,100.0%
+CHECKOUT,63.5%,0.0%

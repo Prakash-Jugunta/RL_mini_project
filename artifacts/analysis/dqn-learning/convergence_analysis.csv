@@ -1,0 +1,6 @@
+threshold,first_episode_reaching,global_step_at_first,stable_after_episode,global_step_at_stable,evidence
+50% rolling success,135,1929,135,1929,Rolling 100-episode window success rate reached 50%
+80% rolling success,422,4351,422,4351,Rolling 100-episode window success rate reached 80%
+90% rolling success,463,4557,463,4557,Rolling 100-episode window success rate reached 90%
+95% rolling success,483,4640,813,6272,Rolling 100-episode window success rate reached 95%
+99% rolling success,634,5391,14994,68435,Rolling 100-episode window success rate reached 99%

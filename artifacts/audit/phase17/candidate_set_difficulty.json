@@ -1,0 +1,24 @@
+{
+  "mean_candidates_per_decision": 11.2,
+  "median_candidates_per_decision": 11.0,
+  "min_candidates": 7,
+  "max_candidates": 18,
+  "operation_compatibility": {
+    "FILL_steps": {
+      "mean_total_candidates": 11.5,
+      "mean_type_compatible_candidates": 2.1,
+      "note": "FILL steps contain on average ~2 text-editable candidates out of 11 total elements."
+    },
+    "CLICK_steps": {
+      "mean_total_candidates": 10.8,
+      "mean_type_compatible_candidates": 3.4,
+      "note": "CLICK steps contain on average ~3-4 clickable button/link candidates."
+    },
+    "VERIFY_steps": {
+      "mean_total_candidates": 12.0,
+      "mean_type_compatible_candidates": 12.0,
+      "note": "Page-state assertions consume 0 RL decisions."
+    }
+  },
+  "structural_difficulty_assessment": "MODERATE \u2014 While candidate sets contain 7\u201318 elements, operation-type filtering narrows valid choices down to 1\u20134 compatible candidates per step."
+}

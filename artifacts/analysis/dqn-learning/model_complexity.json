@@ -1,0 +1,16 @@
+{
+  "checkpoint_path": "artifacts/dqn/phase13-v1/latest_checkpoint.pt",
+  "checkpoint_size_bytes": 1143061,
+  "checkpoint_size_mb": 1.14,
+  "checkpoint_size_mib": 1.09,
+  "trainable_parameters": 69601,
+  "parameter_bytes": 278404,
+  "parameter_kb_decimal": 278.4,
+  "parameter_kib_binary": 271.88,
+  "submodule_parameters": {
+    "objective_encoder": 16576,
+    "context_encoder": 4064,
+    "candidate_encoder": 20032,
+    "q_scorer": 28929
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "split": "test_l6",
+  "total_episodes": 100,
+  "total_decisions": 400,
+  "target_present_decisions": 400,
+  "target_absent_decisions": 0,
+  "candidate_recall_rate": 100.0,
+  "note": "Candidate recall on canonical Test-L6 is 100.0%. Target candidate was present in extracted candidate list for all 400 decisions."
+}

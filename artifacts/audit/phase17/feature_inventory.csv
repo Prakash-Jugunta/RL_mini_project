@@ -1,0 +1,14 @@
+component,feature_family,dimension_range,source,description,public_or_private,potential_shortcut_risk
+objective,Text Intent,0..63 (64 dims),step.agent_intent,Deterministic 64-dim feature hash of intent text string,PUBLIC,LOW
+context,Workflow One-Hot,0..3 (4 dims),workflow_id,"One-hot identity of active workflow (LOGIN, SEARCH, PROFILE, CHECKOUT)",PUBLIC,LOW
+context,Operation One-Hot,4..6 (3 dims),step.action_type,"One-hot operation type (fill, click, verify)",PUBLIC,MEDIUM
+context,Step Progress,7 (1 dim),step_index / total_steps,"Normalized step index progression ratio [0.0, 1.0]",PUBLIC,LOW
+context,Previous Action Flag,8 (1 dim),has_previous_action,Binary indicator if a previous action was executed in current episode,PUBLIC,LOW
+context,Previous Candidate Public Features,9..28 (20 dims),previous_candidate,Structural tag/type/attr features of last selected candidate,PUBLIC,LOW
+context,Previous Success,29 (1 dim),previous_success,Binary indicator if previous action satisfied step validation,PUBLIC,LOW
+candidates,Text Embedding,0..63 (64 dims),UICandidate text/placeholder/aria/id/class,Deterministic 64-dim feature hash of serialized public text attributes,PUBLIC,MEDIUM
+candidates,Tag One-Hot,64..71 (8 dims),UICandidate.tag,"One-hot tag encoding (input, button, a, select, textarea, div, text_node, other)",PUBLIC,MEDIUM
+candidates,Type One-Hot,72..77 (6 dims),UICandidate.element_type,"One-hot element type encoding (text, password, submit, button, checkbox_radio, other)",PUBLIC,HIGH
+candidates,Attribute Flags,78..83 (6 dims),UICandidate.visible/enabled/attrs,"Flags for visible, enabled, has_text, has_placeholder, has_aria, attr_count_norm",PUBLIC,LOW
+candidates,Visual Bounding Box,84..90 (7 dims),UICandidate.x/y/width/height,"Viewport-normalized geometry (x, y, width, height, center_x, center_y, area_ratio)",PUBLIC,LOW
+candidate_mask,Validity Mask,0..19 (20 dims),len(candidates),"Int8 mask (1 for extracted candidate, 0 for zero-padding)",PUBLIC,LOW

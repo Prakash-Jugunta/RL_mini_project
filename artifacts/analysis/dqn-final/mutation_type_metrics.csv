@@ -1,0 +1,66 @@
+split,mutation_level,mutation_seed,preset_name,episodes,success_count,success_rate,mean_return
+validation,L0,11,Original (L0),4,4,100.0,8.8
+validation,L0,22,Original (L0),4,4,100.0,8.8
+validation,L0,33,Original (L0),4,4,100.0,8.8
+validation,L0,44,Original (L0),4,4,100.0,8.8
+validation,L0,55,Original (L0),4,4,100.0,8.8
+validation,L1,11,ID + Class (L1),4,4,100.0,8.8
+validation,L1,22,ID + Class (L1),4,4,100.0,8.8
+validation,L1,33,ID + Class (L1),4,4,100.0,8.8
+validation,L1,44,ID + Class (L1),4,4,100.0,8.8
+validation,L1,55,ID + Class (L1),4,4,100.0,8.8
+validation,L2,11,Text / Semantic (L2),4,4,100.0,8.8
+validation,L2,22,Text / Semantic (L2),4,4,100.0,8.8
+validation,L2,33,Text / Semantic (L2),4,4,100.0,8.8
+validation,L2,44,Text / Semantic (L2),4,4,100.0,8.8
+validation,L2,55,Text / Semantic (L2),4,4,100.0,8.8
+validation,L3,11,Structural (L3),4,4,100.0,8.8
+validation,L3,22,Structural (L3),4,4,100.0,8.8
+validation,L3,33,Structural (L3),4,4,100.0,8.8
+validation,L3,44,Structural (L3),4,4,100.0,8.8
+validation,L3,55,Structural (L3),4,4,100.0,8.8
+validation,L4,11,Distractor (L4),4,4,100.0,8.8
+validation,L4,22,Distractor (L4),4,4,100.0,8.8
+validation,L4,33,Distractor (L4),4,4,100.0,8.8
+validation,L4,44,Distractor (L4),4,4,100.0,8.8
+validation,L4,55,Distractor (L4),4,4,100.0,8.8
+validation,L5,11,id+text (L5),4,4,100.0,8.8
+validation,L5,22,text+position (L5),4,4,100.0,8.8
+validation,L5,33,id+dom (L5),4,4,100.0,8.8
+validation,L5,44,text+distractor (L5),4,4,100.0,8.8
+validation,L5,55,id+position (L5),4,4,100.0,8.8
+test-id,L0,11,Original (L0),4,4,100.0,8.8
+test-id,L0,22,Original (L0),4,4,100.0,8.8
+test-id,L0,33,Original (L0),4,4,100.0,8.8
+test-id,L0,44,Original (L0),4,4,100.0,8.8
+test-id,L0,55,Original (L0),4,4,100.0,8.8
+test-id,L1,11,ID + Class (L1),4,4,100.0,8.8
+test-id,L1,22,ID + Class (L1),4,4,100.0,8.8
+test-id,L1,33,ID + Class (L1),4,4,100.0,8.8
+test-id,L1,44,ID + Class (L1),4,4,100.0,8.8
+test-id,L1,55,ID + Class (L1),4,4,100.0,8.8
+test-id,L2,11,Text / Semantic (L2),4,4,100.0,8.8
+test-id,L2,22,Text / Semantic (L2),4,4,100.0,8.8
+test-id,L2,33,Text / Semantic (L2),4,4,100.0,8.8
+test-id,L2,44,Text / Semantic (L2),4,4,100.0,8.8
+test-id,L2,55,Text / Semantic (L2),4,4,100.0,8.8
+test-id,L3,11,Structural (L3),4,4,100.0,8.8
+test-id,L3,22,Structural (L3),4,4,100.0,8.8
+test-id,L3,33,Structural (L3),4,4,100.0,8.8
+test-id,L3,44,Structural (L3),4,4,100.0,8.8
+test-id,L3,55,Structural (L3),4,4,100.0,8.8
+test-id,L4,11,Distractor (L4),4,4,100.0,8.8
+test-id,L4,22,Distractor (L4),4,4,100.0,8.8
+test-id,L4,33,Distractor (L4),4,4,100.0,8.8
+test-id,L4,44,Distractor (L4),4,4,100.0,8.8
+test-id,L4,55,Distractor (L4),4,4,100.0,8.8
+test-id,L5,11,id+text (L5),4,4,100.0,8.8
+test-id,L5,22,text+position (L5),4,4,100.0,8.8
+test-id,L5,33,id+dom (L5),4,4,100.0,8.8
+test-id,L5,44,text+distractor (L5),4,4,100.0,8.8
+test-id,L5,55,id+position (L5),4,4,100.0,8.8
+test-l6,L6,11,id+dom+distractor [HELD-OUT L6],20,20,100.0,8.8
+test-l6,L6,22,text+type+position [HELD-OUT L6],20,20,100.0,8.8
+test-l6,L6,33,id+text+dom [HELD-OUT L6],20,20,100.0,8.8
+test-l6,L6,44,position+dom+distractor [HELD-OUT L6],20,20,100.0,8.8
+test-l6,L6,55,id+text+dom+distractor [HELD-OUT L6],20,20,100.0,8.8

@@ -1,0 +1,14 @@
+{
+  "method": "brittle",
+  "split": "test-l6",
+  "overall": {
+    "episodes": 100,
+    "success_count": 40,
+    "success_rate": 40.0,
+    "failure_count": 60,
+    "failure_reason_breakdown": {
+      "locator_failure: Locator.fill: Timeout 3000ms exceeded...": 45,
+      "locator_failure: Locator.click: Timeout 3000ms exceede...": 15
+    }
+  }
+}

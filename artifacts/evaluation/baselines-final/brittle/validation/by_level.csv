@@ -1,0 +1,7 @@
+mutation_level,episodes,success_count,success_rate
+L0,20,20,100.0
+L1,20,0,0.0
+L2,20,20,100.0
+L3,20,20,100.0
+L4,20,20,100.0
+L5,20,8,40.0

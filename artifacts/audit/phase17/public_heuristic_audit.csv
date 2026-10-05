@@ -1,0 +1,6 @@
+rule_name,step_selection_rate,workflow_success_rate,description
+Rule A: First Operation-Compatible Candidate,62.5,25.0,Selects first candidate matching action_type (fill/click/verify)
+Rule B: Text/Objective Similarity Only,87.5,75.0,Selects valid candidate with highest text similarity to step intent
+Rule C: Structural/Type Filter + Text Match,95.0,90.0,"Filters by operation type first, then ranks by public text similarity"
+Rule D: Position Top-Left First,35.0,0.0,Selects top-most visible candidate
+Rule E: Public Heuristic Baseline (Phase 15),100.0,100.0,Phase 9 public-feature scoring rule

@@ -1,0 +1,16 @@
+mutation_level,preset_or_type,id_mutation,class_mutation,text_mutation,position_mutation,dom_mutation,distractor_mutation,compound_combination,seen_in_training
+L0,Original Baseline,False,False,False,False,False,False,False,True
+L1,ID + Class,True,True,False,False,False,False,False,True
+L2,Text / Semantic,False,False,True,False,False,False,False,True
+L3,Structural,False,False,False,True,True,False,False,True
+L4,Distractors,False,False,False,False,False,True,False,True
+L5 (seed 11),id+text,True,False,True,False,False,False,True,True
+L5 (seed 22),text+position,False,False,True,True,False,False,True,True
+L5 (seed 33),id+dom,True,False,False,False,True,False,True,True
+L5 (seed 44),text+distractor,False,False,True,False,False,True,True,True
+L5 (seed 55),id+position,True,False,False,True,False,False,True,True
+L6 (seed 11),id+dom+distractor [OOD],True,False,False,False,True,True,True,False
+L6 (seed 22),text+type+position [OOD],False,False,True,True,False,False,True,False
+L6 (seed 33),id+text+dom [OOD],True,False,True,False,True,False,True,False
+L6 (seed 44),position+dom+distractor [OOD],False,False,False,True,True,True,True,False
+L6 (seed 55),id+text+dom+distractor [OOD],True,False,True,False,True,True,True,False
