@@ -86,7 +86,7 @@ export default function App() {
               />
               <Route
                 path="/products"
-                element={<ProductCatalogPage onAddToCart={handleAddToCart} />}
+                  element={<ProductCatalogPage />}
               />
               <Route
                 path="/products/:productId"
@@ -122,7 +122,7 @@ export default function App() {
               <Route path="*" element={<Navigate to="/products" replace />} />
             </Routes>
           </main>
-          <DebugPanel />
+          {import.meta.env.DEV && <DebugPanel />}
         </div>
       </MutationProvider>
     </Router>

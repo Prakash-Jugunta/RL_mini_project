@@ -4,7 +4,7 @@ import { useMutation } from '../mutations/useMutation.js';
 
 /**
  * Development Inspection & Mutation Debug Panel Component
- * Toggled via ?debug=true URL query string or manual toggle button.
+ * Enabled on development pages with ?debug=true.
  * Displays DOM inspection metadata and active Mutation Level / Seed.
  *
  * CRITICAL NOTE:
@@ -19,9 +19,7 @@ export default function DebugPanel() {
   const { mutationLevel, seed, levelConfig } = useMutation();
 
   useEffect(() => {
-    if (searchParams.get('debug') === 'true') {
-      setIsDebugEnabled(true);
-    }
+    setIsDebugEnabled(searchParams.get('debug') === 'true');
   }, [location.search]);
 
   useEffect(() => {
@@ -57,19 +55,7 @@ export default function DebugPanel() {
     return () => window.removeEventListener('mouseover', handleMouseOver);
   }, [isDebugEnabled]);
 
-  if (!isDebugEnabled) {
-    return (
-      <div style={{ position: 'fixed', bottom: '10px', right: '10px', zIndex: 9999 }}>
-        <button
-          className="debug-toggle-btn"
-          onClick={() => setIsDebugEnabled(true)}
-          title="Enable DOM Inspection & Mutation Debug Panel"
-        >
-          Debug Panel (L{mutationLevel}/S{seed})
-        </button>
-      </div>
-    );
-  }
+  if (!isDebugEnabled) return null;
 
   return (
     <div className="debug-panel" id="debug-inspection-panel">

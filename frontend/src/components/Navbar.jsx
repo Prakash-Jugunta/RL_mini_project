@@ -29,7 +29,7 @@ export default function Navbar({ cartCount, user, onLogout }) {
   return (
     <nav className="navbar" role="navigation" aria-label="Main Navigation">
       <Link to="/" className="navbar-brand">
-        RL <span>Self-Healing</span> Demo
+        <span className="navbar-brand-mark" aria-hidden="true">F</span> Fielddesk
       </Link>
       <ul className="navbar-nav">
         <li>

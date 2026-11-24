@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { PRODUCTS } from '../data/seedData';
 import { useMutation } from '../mutations/useMutation.js';
 
@@ -13,16 +13,24 @@ import { useMutation } from '../mutations/useMutation.js';
 
 export default function ProductDetailPage({ onAddToCart }) {
   const { productId } = useParams();
-  const navigate = useNavigate();
-  const [addedNotice, setAddedNotice] = useState(false);
+  const [addedProductId, setAddedProductId] = useState(null);
 
   const { mutate } = useMutation();
 
-  const product = PRODUCTS.find((p) => p.id === productId) || PRODUCTS[0];
+  const product = PRODUCTS.find((p) => p.id === productId);
+
+  if (!product) {
+    return (
+      <section className="storefront-empty">
+        <h1>Product not found</h1>
+        <Link className="btn btn-primary" to="/products">Back to products</Link>
+      </section>
+    );
+  }
 
   const handleAddToCart = () => {
     onAddToCart(product);
-    setAddedNotice(true);
+    setAddedProductId(product.id);
   };
 
   const addToCartProps = mutate('add-cart-action', {
@@ -32,63 +40,51 @@ export default function ProductDetailPage({ onAddToCart }) {
   });
 
   return (
-    <div className="card" style={{ maxWidth: '640px', margin: '2rem auto' }}>
-      <button
-        className="btn btn-secondary"
-        onClick={() => navigate('/products')}
-        style={{ marginBottom: '1.5rem', padding: '0.4rem 0.8rem', fontSize: '0.85rem' }}
-      >
-        &larr; Back to Products
-      </button>
-
-      <div className="page-header">
-        <h1 className="page-title">{product.name}</h1>
-        <p className="page-subtitle">Product ID: {product.id}</p>
-      </div>
-
-      <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', fontSize: '1rem', lineHeight: '1.6' }}>
-        {product.description}
-      </p>
-
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
-        <span style={{ fontSize: '1.75rem', fontWeight: 700, color: 'var(--primary-color)' }}>
-          ${(product.price / 100).toFixed(2)}
-        </span>
-        <span style={{ backgroundColor: 'rgba(16, 185, 129, 0.2)', color: '#34d399', padding: '0.25rem 0.75rem', borderRadius: '9999px', fontSize: '0.875rem', fontWeight: 600 }}>
-          In Stock (Deterministic)
-        </span>
-      </div>
-
-      {addedNotice && (
-        <div className="alert-success" style={{ marginBottom: '1.5rem' }}>
-          Added {product.name} to cart!
+    <div className="storefront-detail">
+      <Link className="storefront-back" to="/products">&larr; Back to products</Link>
+      <div className="storefront-detail-layout">
+        <div className="storefront-product-media">
+          <img src={`/storefront/${product.image}.webp`} alt={product.name} width="480" height="480" />
         </div>
-      )}
+        <div className="storefront-detail-copy">
+          <p className="storefront-product-category">{product.category}</p>
+          <h1>{product.name}</h1>
+          <p className="storefront-detail-description">{product.description}</p>
+          <dl className="storefront-specs">
+            <div><dt>SKU</dt><dd>{product.sku}</dd></div>
+            <div><dt>Availability</dt><dd>In stock</dd></div>
+          </dl>
+          <p className="product-price">${(product.price / 100).toFixed(2)}</p>
 
-      {addToCartProps.renderAs === 'a' ? (
-        <a
-          id={addToCartProps.id}
-          href="#add"
-          role="button"
-          aria-label="Add to Cart"
-          data-semantic-role="add-cart-action"
-          onClick={(e) => { e.preventDefault(); handleAddToCart(); }}
-          className={addToCartProps.className}
-          style={{ textDecoration: 'none', textAlign: 'center', display: 'block' }}
-        >
-          {addToCartProps.text || 'Add to Cart'}
-        </a>
-      ) : (
-        <button
-          id={addToCartProps.id}
-          aria-label="Add to Cart"
-          data-semantic-role="add-cart-action"
-          onClick={handleAddToCart}
-          className={addToCartProps.className}
-        >
-          {addToCartProps.text || 'Add to Cart'}
-        </button>
-      )}
+          {addToCartProps.renderAs === 'a' ? (
+            <a
+              id={addToCartProps.id}
+              href="#add"
+              role="button"
+              aria-label="Add to Cart"
+              data-semantic-role="add-cart-action"
+              onClick={(e) => { e.preventDefault(); handleAddToCart(); }}
+              className={addToCartProps.className}
+              style={{ textDecoration: 'none', textAlign: 'center', display: 'block' }}
+            >
+              {addToCartProps.text || 'Add to Cart'}
+            </a>
+          ) : (
+            <button
+              id={addToCartProps.id}
+              aria-label="Add to Cart"
+              data-semantic-role="add-cart-action"
+              onClick={handleAddToCart}
+              className={addToCartProps.className}
+            >
+              {addToCartProps.text || 'Add to Cart'}
+            </button>
+          )}
+          {addedProductId === product.id && (
+            <p className="alert-success" role="status">Added {product.name} to cart!</p>
+          )}
+        </div>
+      </div>
     </div>
   );
 }

@@ -94,6 +94,7 @@ class PlaywrightBrowserAdapter(BrowserAdapter):
         max_candidates: int = 20,
         headless: bool = True,
         slow_mo: float = 0.0,
+        record_video_dir: Optional[str] = None,
     ) -> None:
         if not PLAYWRIGHT_AVAILABLE:
             raise RuntimeError(
@@ -104,6 +105,7 @@ class PlaywrightBrowserAdapter(BrowserAdapter):
         self.max_candidates = max_candidates
         self.headless = headless
         self.slow_mo = slow_mo
+        self.record_video_dir = record_video_dir
 
         # Playwright objects (initialised lazily in _ensure_browser)
         self._playwright: Optional[Playwright] = None
@@ -143,18 +145,31 @@ class PlaywrightBrowserAdapter(BrowserAdapter):
             headless=self.headless,
             slow_mo=self.slow_mo,
         )
-        self._context = self._browser.new_context(
-            viewport={"width": 1280, "height": 800},
-        )
+        ctx_kwargs: Dict[str, Any] = {"viewport": {"width": 1280, "height": 800}}
+        if self.record_video_dir:
+            import os
+            os.makedirs(self.record_video_dir, exist_ok=True)
+            ctx_kwargs["record_video_dir"] = self.record_video_dir
+            ctx_kwargs["record_video_size"] = {"width": 1280, "height": 800}
+
+        self._context = self._browser.new_context(**ctx_kwargs)
         self._page = self._context.new_page()
 
     def close(self) -> None:
         """Tear down browser resources cleanly."""
+        video_path = None
         try:
             if self._page:
+                try:
+                    if self._page.video:
+                        video_path = self._page.video.path()
+                except Exception:
+                    pass
                 self._page.close()
             if self._context:
                 self._context.close()
+            if video_path and os.path.exists(video_path):
+                print(f"\n[VIDEO RECORDING SAVED]: {video_path}\n", flush=True)
             if self._browser:
                 self._browser.close()
             if self._playwright:

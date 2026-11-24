@@ -161,6 +161,12 @@ def build_parser() -> argparse.ArgumentParser:
         default=2,
         help="Target 1-based rank of candidate to inject at the specified wrong step (default: 2)",
     )
+    parser.add_argument(
+        "--record-video-dir",
+        type=str,
+        default=None,
+        help="Directory to save Playwright video recording (.webm)",
+    )
     return parser
 
 
@@ -177,6 +183,7 @@ def run_dqn_demo(
     show_evaluator_debug: bool = False,
     inject_wrong_step: Optional[int] = None,
     inject_wrong_rank: int = 2,
+    record_video_dir: Optional[str] = None,
     browser_adapter: Optional[BrowserAdapter] = None,
     interactive_prompt: bool = True,
 ) -> Dict[str, Any]:
@@ -212,6 +219,7 @@ def run_dqn_demo(
             max_candidates=20,
             headless=not headed,
             slow_mo=0.0,
+            record_video_dir=record_video_dir,
         )
     else:
         adapter = browser_adapter or MockBrowserAdapter(max_candidates=20)
@@ -550,6 +558,7 @@ def main():
         show_evaluator_debug=args.show_evaluator_debug,
         inject_wrong_step=args.inject_wrong_step,
         inject_wrong_rank=args.inject_wrong_rank,
+        record_video_dir=args.record_video_dir,
         interactive_prompt=not args.auto,
     )
 

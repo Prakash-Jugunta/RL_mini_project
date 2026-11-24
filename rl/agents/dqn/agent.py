@@ -94,24 +94,24 @@ class DQNAgent:
         if explore and self.rng.random() < eps:
             action = int(self.rng.choice(valid_indices))
         else:
-            obs_t = {
-                "objective": torch.tensor(observation["objective"], dtype=torch.float32, device=self.device).unsqueeze(0),
-                "context": torch.tensor(observation["context"], dtype=torch.float32, device=self.device).unsqueeze(0),
-                "candidates": torch.tensor(observation["candidates"], dtype=torch.float32, device=self.device).unsqueeze(0),
-            }
-            mask_t = torch.tensor(candidate_mask, dtype=torch.float32, device=self.device).unsqueeze(0)
-
-            self.online_network.eval()
-            with torch.no_grad():
-                raw_q = self.online_network(obs_t)
-                masked_q = apply_action_mask(raw_q, mask_t)
-                action = int(torch.argmax(masked_q, dim=1).item())
+            action = int(self.score_actions(observation).argmax())
 
         # Defensive sanity check
         if candidate_mask[action] != 1:
             raise RuntimeError(f"DQN selected an invalid padded action index {action} (mask is 0).")
 
         return action
+
+    def score_actions(self, observation: Dict[str, np.ndarray]) -> np.ndarray:
+        """Return masked Q-values without exploration or a training update."""
+        features = {
+            name: torch.as_tensor(observation[name], dtype=torch.float32, device=self.device).unsqueeze(0)
+            for name in ("objective", "context", "candidates")
+        }
+        mask = torch.as_tensor(observation["candidate_mask"], dtype=torch.float32, device=self.device).unsqueeze(0)
+        self.online_network.eval()
+        with torch.no_grad():
+            return apply_action_mask(self.online_network(features), mask).squeeze(0).cpu().numpy()
 
     def store_transition(
         self,

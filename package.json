@@ -4,8 +4,10 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "npm --prefix frontend run dev",
+    "demo:recovery": "npm --prefix frontend run demo:recovery --",
     "build": "npm --prefix frontend run build",
     "test:e2e": "npm --prefix frontend run test:e2e",
+    "test:e2e:storefront": "npm --prefix frontend run test:e2e:storefront --",
     "test:e2e:headed": "npm --prefix frontend run test:e2e:headed",
     "test:e2e:ui": "npm --prefix frontend run test:e2e:ui",
     "test:e2e:report": "npm --prefix frontend run test:e2e:report",

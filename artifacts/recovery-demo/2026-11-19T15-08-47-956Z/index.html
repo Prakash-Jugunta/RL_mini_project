@@ -1,0 +1,106 @@
+<!doctype html><html lang="en"><meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1"><title>Fielddesk Recovery Report</title><style>
+  :root{color:#182727;background:#edf1ef;font:16px/1.5 system-ui,sans-serif}
+  body{max-width:1140px;margin:auto;padding:clamp(1rem,4vw,3rem)}
+  h1,h2,p{margin:0 0 .65rem}h1{font-size:clamp(2.3rem,6vw,4.5rem);line-height:1;letter-spacing:-.06em}
+  h2{font-size:1.3rem;line-height:1.2}a{color:#154ca8}a:focus-visible{outline:3px solid #235acc;outline-offset:4px}
+  .hero{padding:clamp(1.5rem,5vw,3.5rem);background:#182b2a;color:white;border-radius:16px}.hero p{max-width:65ch;color:#d2e7df}
+  .hero a{color:#b6dbff}.route{color:#43605d;font-size:.85rem;font-weight:700}.hero .route{color:#a7dace}
+  .workflow,.case{background:white;border:1px solid #d2ded9;border-radius:12px;padding:clamp(1rem,3vw,1.75rem);margin-top:1.25rem}
+  .flow-start,.flow-end,.branches{display:flex;justify-content:center;align-items:stretch;gap:1rem;margin:1rem 0;text-align:center}
+  .flow-start div,.branches>div,.flow-end strong{background:#edf5f2;border:1px solid #c4d9d0;border-radius:8px;padding:.7rem 1rem}
+  .flow-start b{align-self:center}.flow-start span{display:block}.branches>div{flex:1}.branches>div:last-child{flex:2}
+  .choices{display:flex;justify-content:center;gap:.65rem;flex-wrap:wrap;margin:.7rem 0}.choices span{background:white;border-radius:6px;padding:.35rem .65rem;font-size:.9rem}
+  .flow-end{flex-direction:column;align-items:center;gap:.35rem;margin-bottom:0}
+  .case header,.details,.evidence{display:flex;gap:1rem;flex-wrap:wrap}.case header{justify-content:space-between;align-items:start}
+  .status{padding:.3rem .65rem;border-radius:5px;font-size:.85rem;font-weight:700}.good{background:#dff4e8;color:#175538}.bad{background:#ffe1de;color:#842a20}.quiet{background:#e8edeb;color:#41514f}
+  .details{margin:.5rem 0 1rem}.details div{padding:.5rem .75rem;background:#f3f6f5;border-radius:6px}.details dt{font-size:.8rem;color:#465654}.details dd{margin:0;font-weight:700}
+  table{border-collapse:collapse;width:100%;margin:1rem 0;text-align:left;font-size:.9rem}caption{text-align:left;font-weight:700;margin-bottom:.4rem}th,td{padding:.45rem .65rem;border-bottom:1px solid #d9e3df}th{background:#f3f6f5}
+  .assertion{margin-top:1rem}.evidence figure{max-width:345px;flex:1 1 230px;margin:0}.evidence img{width:100%;border:1px solid #d2ded9;border-radius:6px}.evidence figcaption{font-size:.8rem;color:#43605d}pre{overflow:auto;background:#f7f5f5;padding:.75rem}
+  @media(max-width:630px){.branches{flex-direction:column}.flow-start{gap:.35rem}th,td{padding:.3rem}.case{overflow-wrap:anywhere}}
+</style>
+      <main><header class="hero"><p class="route">Fielddesk · Playwright recovery</p><h1>Self-healing test report</h1>
+      <p>Run passed · 5 scenarios executed · 61.3 seconds.</p>
+      <p>The Q-value is the trained agent’s estimate of future reward for a candidate action.</p>
+      <a href="playwright-report/index.html">Full Playwright report</a> · <a href="results.json">Raw results</a></header>
+      <section class="workflow" aria-labelledby="workflow-title">
+  <h2 id="workflow-title">Recovery workflow</h2>
+  <div class="flow-start"><div><strong>Playwright</strong><span>Run the original locator</span></div><b aria-hidden="true">→</b><div><strong>One match?</strong><span>Check the live page</span></div></div>
+  <div class="branches">
+    <div><p class="route">Unique locator</p><strong>Use the original control</strong></div>
+    <div><p class="route">Missing or ambiguous locator</p><strong>Capture public DOM candidates → DQN ranks them</strong>
+      <div class="choices"><span>Clear match → use DQN pick</span><span>Ambiguous → ask LLM for a candidate ID</span></div>
+      <small>If there is no supported candidate, leave the step unresolved.</small>
+    </div>
+  </div>
+  <div class="flow-end"><strong>Playwright validates the target and runs the original action</strong>
+    <b aria-hidden="true">↓</b><strong>Original test assertion determines pass or failure</strong></div>
+</section>
+      <article class="case"><header><div><p class="route">Original locator · 2.7 s</p>
+    <h2>Release A completes the search with the original locator</h2></div><span class="status good">Passed</span></header>
+    
+    
+    <p class="assertion"><strong>Original SKU assertion</strong> · Expected <code>FD-M01</code> · Observed <code>FD-M01</code> · Pass</p>
+    
+    <div class="evidence"><figure><a href="screenshots/c5b54d6c6b58873aa6be-785487daedc749e1dca2-1.png"><img src="screenshots/c5b54d6c6b58873aa6be-785487daedc749e1dca2-1.png" alt="Playwright found the original Search control." loading="lazy"></a><figcaption>Playwright found the original Search control.</figcaption></figure><figure><a href="screenshots/c5b54d6c6b58873aa6be-785487daedc749e1dca2-2.png"><img src="screenshots/c5b54d6c6b58873aa6be-785487daedc749e1dca2-2.png" alt="Playwright verified SKU FD-M01." loading="lazy"></a><figcaption>Playwright verified SKU FD-M01.</figcaption></figure></div></article><article class="case"><header><div><p class="route">Trained DQN · 13.5 s</p>
+    <h2>DQN recovers a supported Search control without model access</h2></div><span class="status good">Passed</span></header>
+    <dl class="details"><div><dt>Original locator</dt><dd><code>#search-btn</code> · 0 matches</dd></div>
+      <div><dt>Recovery decision time</dt><dd>9813 ms</dd></div>
+      <div><dt>Selected candidate</dt><dd>#0</dd></div>
+      <div><dt>Replacement clicked</dt><dd>Yes</dd></div>
+      </dl>
+      <p> The top-ranked candidate matched the original name and form scope.</p>
+    <table><caption>DQN rankings</caption><thead><tr><th>Candidate</th><th>Control</th><th>Form scope</th><th>Q-value</th><th>Selected</th></tr></thead><tbody>
+      <tr><td>#0</td><td>Search</td><td>Catalog</td>
+        <td>5.502</td><td>Yes</td></tr></tbody></table>
+    <p class="assertion"><strong>Original SKU assertion</strong> · Expected <code>FD-M01</code> · Observed <code>FD-M01</code> · Pass</p>
+    
+    <div class="evidence"><figure><a href="screenshots/c5b54d6c6b58873aa6be-800c2336c9209ed855bc-1.png"><img src="screenshots/c5b54d6c6b58873aa6be-800c2336c9209ed855bc-1.png" alt="Original locator has 0 matches. DQN is ranking 1 controls." loading="lazy"></a><figcaption>Original locator has 0 matches. DQN is ranking 1 controls.</figcaption></figure><figure><a href="screenshots/c5b54d6c6b58873aa6be-800c2336c9209ed855bc-2.png"><img src="screenshots/c5b54d6c6b58873aa6be-800c2336c9209ed855bc-2.png" alt="DQN selected Catalog / Search." loading="lazy"></a><figcaption>DQN selected Catalog / Search.</figcaption></figure><figure><a href="screenshots/c5b54d6c6b58873aa6be-800c2336c9209ed855bc-3.png"><img src="screenshots/c5b54d6c6b58873aa6be-800c2336c9209ed855bc-3.png" alt="Playwright verified SKU FD-M01." loading="lazy"></a><figcaption>Playwright verified SKU FD-M01.</figcaption></figure></div></article><article class="case"><header><div><p class="route">Model tiebreaker · 14.0 s</p>
+    <h2>Release B sends two Search buttons to the model tiebreaker</h2></div><span class="status good">Passed</span></header>
+    <dl class="details"><div><dt>Original locator</dt><dd><code>#search-btn</code> · 0 matches</dd></div>
+      <div><dt>Recovery decision time</dt><dd>10289 ms</dd></div>
+      <div><dt>Selected candidate</dt><dd>#0</dd></div>
+      <div><dt>Replacement clicked</dt><dd>Yes</dd></div>
+      <div><dt>Model</dt><dd>Local Responses API mock</dd></div></dl>
+      <p>Multiple controls shared the original accessible name. The model returned a candidate from the shortlist.</p>
+    <table><caption>DQN rankings</caption><thead><tr><th>Candidate</th><th>Control</th><th>Form scope</th><th>Q-value</th><th>Selected</th></tr></thead><tbody>
+      <tr><td>#0</td><td>Search</td><td>Catalog</td>
+        <td>5.502</td><td>Yes</td></tr><tr><td>#1</td><td>Search</td><td>Help center</td>
+        <td>5.359</td><td>–</td></tr></tbody></table>
+    <p class="assertion"><strong>Original SKU assertion</strong> · Expected <code>FD-M01</code> · Observed <code>FD-M01</code> · Pass</p>
+    
+    <div class="evidence"><figure><a href="screenshots/c5b54d6c6b58873aa6be-ac15ec733ca9a2c8621f-1.png"><img src="screenshots/c5b54d6c6b58873aa6be-ac15ec733ca9a2c8621f-1.png" alt="Original locator has 0 matches. DQN is ranking 2 controls." loading="lazy"></a><figcaption>Original locator has 0 matches. DQN is ranking 2 controls.</figcaption></figure><figure><a href="screenshots/c5b54d6c6b58873aa6be-ac15ec733ca9a2c8621f-2.png"><img src="screenshots/c5b54d6c6b58873aa6be-ac15ec733ca9a2c8621f-2.png" alt="LLM branch (local mock) selected Catalog / Search." loading="lazy"></a><figcaption>LLM branch (local mock) selected Catalog / Search.</figcaption></figure><figure><a href="screenshots/c5b54d6c6b58873aa6be-ac15ec733ca9a2c8621f-3.png"><img src="screenshots/c5b54d6c6b58873aa6be-ac15ec733ca9a2c8621f-3.png" alt="Playwright verified SKU FD-M01." loading="lazy"></a><figcaption>Playwright verified SKU FD-M01.</figcaption></figure></div></article><article class="case"><header><div><p class="route">Unresolved · 12.6 s</p>
+    <h2>Ambiguous Search remains unresolved without a model</h2></div><span class="status good">Passed</span></header>
+    <dl class="details"><div><dt>Original locator</dt><dd><code>#search-btn</code> · 0 matches</dd></div>
+      <div><dt>Recovery decision time</dt><dd>9983 ms</dd></div>
+      <div><dt>Selected candidate</dt><dd>None</dd></div>
+      <div><dt>Replacement clicked</dt><dd>No</dd></div>
+      </dl>
+      <p>Multiple controls shared the original accessible name. The model was unavailable. Playwright left the step unresolved.</p>
+    <table><caption>DQN rankings</caption><thead><tr><th>Candidate</th><th>Control</th><th>Form scope</th><th>Q-value</th><th>Selected</th></tr></thead><tbody>
+      <tr><td>#0</td><td>Search</td><td>Catalog</td>
+        <td>5.502</td><td>–</td></tr><tr><td>#1</td><td>Search</td><td>Help center</td>
+        <td>5.359</td><td>–</td></tr></tbody></table>
+    
+    
+    <div class="evidence"><figure><a href="screenshots/c5b54d6c6b58873aa6be-a8a608fa8309fde6e3c3-1.png"><img src="screenshots/c5b54d6c6b58873aa6be-a8a608fa8309fde6e3c3-1.png" alt="Original locator has 0 matches. DQN is ranking 2 controls." loading="lazy"></a><figcaption>Original locator has 0 matches. DQN is ranking 2 controls.</figcaption></figure><figure><a href="screenshots/c5b54d6c6b58873aa6be-a8a608fa8309fde6e3c3-2.png"><img src="screenshots/c5b54d6c6b58873aa6be-a8a608fa8309fde6e3c3-2.png" alt="Recovery stopped. There is no verified replacement." loading="lazy"></a><figcaption>Recovery stopped. There is no verified replacement.</figcaption></figure></div></article><article class="case"><header><div><p class="route">Model tiebreaker · 15.0 s</p>
+    <h2>A recovered search still fails the assertion when the store opens the wrong SKU</h2></div><span class="status good">Regression caught</span></header>
+    <dl class="details"><div><dt>Original locator</dt><dd><code>#search-btn</code> · 0 matches</dd></div>
+      <div><dt>Recovery decision time</dt><dd>10280 ms</dd></div>
+      <div><dt>Selected candidate</dt><dd>#0</dd></div>
+      <div><dt>Replacement clicked</dt><dd>Yes</dd></div>
+      <div><dt>Model</dt><dd>Local Responses API mock</dd></div></dl>
+      <p>Multiple controls shared the original accessible name. The model returned a candidate from the shortlist.</p>
+    <table><caption>DQN rankings</caption><thead><tr><th>Candidate</th><th>Control</th><th>Form scope</th><th>Q-value</th><th>Selected</th></tr></thead><tbody>
+      <tr><td>#0</td><td>Search</td><td>Catalog</td>
+        <td>5.502</td><td>Yes</td></tr><tr><td>#1</td><td>Search</td><td>Help center</td>
+        <td>5.359</td><td>–</td></tr></tbody></table>
+    <p class="assertion"><strong>Original SKU assertion</strong> · Expected <code>FD-M01</code> · Observed <code>FD-M02</code> · Fail</p>
+    
+    <div class="evidence"><figure><a href="screenshots/c5b54d6c6b58873aa6be-bcc76b96bf211f8da80c-1.png"><img src="screenshots/c5b54d6c6b58873aa6be-bcc76b96bf211f8da80c-1.png" alt="Original locator has 0 matches. DQN is ranking 2 controls." loading="lazy"></a><figcaption>Original locator has 0 matches. DQN is ranking 2 controls.</figcaption></figure><figure><a href="screenshots/c5b54d6c6b58873aa6be-bcc76b96bf211f8da80c-2.png"><img src="screenshots/c5b54d6c6b58873aa6be-bcc76b96bf211f8da80c-2.png" alt="LLM branch (local mock) selected Catalog / Search." loading="lazy"></a><figcaption>LLM branch (local mock) selected Catalog / Search.</figcaption></figure><figure><a href="screenshots/c5b54d6c6b58873aa6be-bcc76b96bf211f8da80c-3.png"><img src="screenshots/c5b54d6c6b58873aa6be-bcc76b96bf211f8da80c-3.png" alt="Regression caught. Expected FD-M01, received FD-M02." loading="lazy"></a><figcaption>Regression caught. Expected FD-M01, received FD-M02.</figcaption></figure></div></article><article class="case"><header><div><p class="route">No decision recorded · 0.2 s</p>
+    <h2>Release B recovers with the live model</h2></div><span class="status good">Skipped</span></header>
+    
+    
+    
+    
+    </article></main></html>

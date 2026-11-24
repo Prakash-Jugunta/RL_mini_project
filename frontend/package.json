@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "demo:recovery": "node scripts/run-recovery-demo.js",
     "build": "vite build",
     "preview": "vite preview",
     "test:e2e": "playwright test tests/playwright/login.spec.js tests/playwright/search.spec.js tests/playwright/profile.spec.js tests/playwright/checkout.spec.js",
+    "test:e2e:storefront": "playwright test tests/playwright/storefront-search.spec.js tests/playwright/storefront-recovery.spec.js --reporter=line",
     "test:e2e:headed": "playwright test tests/playwright/login.spec.js tests/playwright/search.spec.js tests/playwright/profile.spec.js tests/playwright/checkout.spec.js --headed",
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:report": "playwright show-report",
